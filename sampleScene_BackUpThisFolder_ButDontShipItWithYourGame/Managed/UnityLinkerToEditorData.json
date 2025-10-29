@@ -9,34 +9,14 @@
         "name": "Animation",
         "dependencies": [
           {
-            "name": "Animation",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
-            "dependencyType": 0,
-            "icon": null
-          },
-          {
-            "name": "AnimationClip",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
-            "dependencyType": 0,
-            "icon": null
-          },
-          {
             "name": "Animator",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AnimatorController",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 1,
             "icon": null
           },
@@ -44,12 +24,6 @@
             "name": "AnimatorOverrideController",
             "scenes": [],
             "dependencyType": 0,
-            "icon": null
-          },
-          {
-            "name": "Motion",
-            "scenes": [],
-            "dependencyType": 1,
             "icon": null
           },
           {
@@ -256,9 +230,7 @@
           },
           {
             "name": "LineRenderer",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -917,17 +889,13 @@
         "dependencies": [
           {
             "name": "ParticleSystem",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "ParticleSystemRenderer",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           }
@@ -938,15 +906,15 @@
         "dependencies": [
           {
             "name": "BoxCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "CapsuleCollider",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -1405,9 +1373,7 @@
           },
           {
             "name": "CanvasGroup",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
