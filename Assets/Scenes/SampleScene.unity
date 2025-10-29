@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 702413257}
   - component: {fileID: 702413261}
   - component: {fileID: 702413260}
+  - component: {fileID: 702413262}
   m_Layer: 0
   m_Name: AR Session
   m_TagString: Untagged
@@ -398,7 +399,7 @@ MonoBehaviour:
       m_Calls: []
   m_SerializedLibrary: {fileID: 11400000, guid: b30e3c912c2f1374b82a982d41002ba7, type: 2}
   m_MaxNumberOfMovingImages: 0
-  m_TrackedImagePrefab: {fileID: 2630332850372906278, guid: 10fce53aaf8b0984b988f69008a5f114, type: 3}
+  m_TrackedImagePrefab: {fileID: 0}
 --- !u!114 &702413261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,6 +417,21 @@ MonoBehaviour:
   m_CameraFloorOffsetObject: {fileID: 0}
   m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.1176
+--- !u!114 &702413262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702413256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ba7e3c2fe91d7409f4819bbba5e39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QRCodeSpawner
+  cubePrefab: {fileID: 2630332850372906278, guid: 10fce53aaf8b0984b988f69008a5f114, type: 3}
+  spherePrefab: {fileID: 702224240098432365, guid: ad5b7140f1140d946b76deb046ab4d85, type: 3}
+  capsulePrefab: {fileID: 1066524028172676089, guid: 02d7d9f6d29af4e47aeb2df3671e6caf, type: 3}
 --- !u!1 &1075000274
 GameObject:
   m_ObjectHideFlags: 0

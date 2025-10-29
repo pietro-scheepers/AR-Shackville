@@ -7,6 +7,12 @@
 
 
 
+extern void QRCodeSpawner_Awake_mDEE179A72624876263BDCFB6F1D35567E9F93D57 (void);
+extern void QRCodeSpawner_OnEnable_m3537E0C0F7E9D017995327074057548E653139A5 (void);
+extern void QRCodeSpawner_OnDisable_m97662D29DEA73F74C2F189787FB35A949D3D1E8E (void);
+extern void QRCodeSpawner_OnTrackedImagesChanged_mB08B32A9C0385EE10B5282B06CDAA81E107ED62A (void);
+extern void QRCodeSpawner_SpawnOrUpdate_mC3C27C0EFF9702E77E4ABD1007FEA5F642AF0BD8 (void);
+extern void QRCodeSpawner__ctor_mDEA39339C567B71EDAFAC173F3D72D71C116E599 (void);
 extern void SceneTemplate_RotateCube_Update_mAF2FB34B99E325443A80D60A7EB73DC092EAE9A6 (void);
 extern void SceneTemplate_RotateCube__ctor_mC7E11C05D25FFF6F8D7EA06AAE5598B497365CD2 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
@@ -99,8 +105,14 @@ extern void U3CWaitUntilNextCardU3Ed__36_MoveNext_mEB6BA70FAED1CFCFF4A723EA3EAB8
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB2315FB1F67F06B37604285AD8F003E282D1607 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_Reset_m5E5CC9DFDC8C17DB423A7C7ECBCD4342A7754633 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_get_Current_mE7D77BA338B271D9E95117683B19436CFFF37229 (void);
-static Il2CppMethodPointer s_methodPointers[92] = 
+static Il2CppMethodPointer s_methodPointers[98] = 
 {
+	QRCodeSpawner_Awake_mDEE179A72624876263BDCFB6F1D35567E9F93D57,
+	QRCodeSpawner_OnEnable_m3537E0C0F7E9D017995327074057548E653139A5,
+	QRCodeSpawner_OnDisable_m97662D29DEA73F74C2F189787FB35A949D3D1E8E,
+	QRCodeSpawner_OnTrackedImagesChanged_mB08B32A9C0385EE10B5282B06CDAA81E107ED62A,
+	QRCodeSpawner_SpawnOrUpdate_mC3C27C0EFF9702E77E4ABD1007FEA5F642AF0BD8,
+	QRCodeSpawner__ctor_mDEA39339C567B71EDAFAC173F3D72D71C116E599,
 	SceneTemplate_RotateCube_Update_mAF2FB34B99E325443A80D60A7EB73DC092EAE9A6,
 	SceneTemplate_RotateCube__ctor_mC7E11C05D25FFF6F8D7EA06AAE5598B497365CD2,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
@@ -197,10 +209,16 @@ static Il2CppMethodPointer s_methodPointers[92] =
 extern void Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x06000041, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
+	{ 0x06000047, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[92] = 
+static const int32_t s_InvokerIndices[98] = 
 {
+	15299,
+	15299,
+	15299,
+	11385,
+	11614,
+	15299,
 	15299,
 	15299,
 	26397,
@@ -298,7 +316,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	92,
+	98,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

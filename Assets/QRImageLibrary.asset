@@ -27,7 +27,7 @@ MonoBehaviour:
       m_GuidHigh: 17361660091429652776
     m_Size: {x: 0.1, y: 0.1}
     m_SpecifySize: 1
-    m_Name: pixelated-blue-snowflake-icon-winter-themed-retro-digital-art-illustration_1292377-15104
+    m_Name: CubeQR
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5735399876293035843
@@ -37,7 +37,7 @@ MonoBehaviour:
       m_GuidHigh: 8032612321495501352
     m_Size: {x: 0.1, y: 0.1}
     m_SpecifySize: 1
-    m_Name: fIWv2o
+    m_Name: ElkQR
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5599347527403327747
@@ -47,5 +47,5 @@ MonoBehaviour:
       m_GuidHigh: 13536796624564521003
     m_Size: {x: 0.1, y: 0.1}
     m_SpecifySize: 1
-    m_Name: teUSyY
+    m_Name: SoundQR
     m_Texture: {fileID: 0}
