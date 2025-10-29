@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QRCodeSpawner
   cubePrefab: {fileID: 2630332850372906278, guid: 10fce53aaf8b0984b988f69008a5f114, type: 3}
-  spherePrefab: {fileID: 702224240098432365, guid: ad5b7140f1140d946b76deb046ab4d85, type: 3}
+  spherePrefab: {fileID: 711460962115037582, guid: 180a7a67a199be24bb1e1adb06162c13, type: 3}
   capsulePrefab: {fileID: 1066524028172676089, guid: 02d7d9f6d29af4e47aeb2df3671e6caf, type: 3}
 --- !u!1 &1075000274
 GameObject:
