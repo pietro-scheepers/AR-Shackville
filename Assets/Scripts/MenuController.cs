@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Globalization;
 using System.Collections.Generic;
 
 public class MenuController : MonoBehaviour
@@ -89,27 +90,16 @@ public class MenuController : MonoBehaviour
     {
         if (site == null) return;
 
-        // Use coordinates only
-        if (site.latitude != 0 || site.longitude != 0)
-        {
+        string lat = site.latitude.ToString(CultureInfo.InvariantCulture);
+        string lon = site.longitude.ToString(CultureInfo.InvariantCulture);
+
         #if UNITY_IOS
-                string appleMaps = $"http://maps.apple.com/?ll={site.latitude},{site.longitude}";
+                string appleMaps = $"http://maps.apple.com/?ll={lat},{lon}";
                 Application.OpenURL(appleMaps);
         #else
-                string googleMaps = $"geo:{site.latitude},{site.longitude}";
-                Application.OpenURL(googleMaps);
-        #endif
-                }
-                else
-                {
-        #if UNITY_IOS
-                string appleMaps = $"http://maps.apple.com/?ll=0,0";
-                Application.OpenURL(appleMaps);
-        #else
-                string googleMapsWeb = $"https://www.google.com/maps/search/?api=1&query=0,0";
+                string googleMapsWeb = $"https://www.google.com/maps/search/?api=1&query={lat},{lon}";
                 Application.OpenURL(googleMapsWeb);
         #endif
-        }
     }
 
 
