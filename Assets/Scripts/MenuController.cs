@@ -89,28 +89,29 @@ public class MenuController : MonoBehaviour
     {
         if (site == null) return;
 
-        // Prefer lat/long if provided
+        // Use coordinates only
         if (site.latitude != 0 || site.longitude != 0)
         {
-#if UNITY_IOS
-            string appleMaps = $"http://maps.apple.com/?ll={site.latitude},{site.longitude}&q={UnityWebRequestEscape(site.siteName)}";
-            Application.OpenURL(appleMaps);
-#else
-            string googleMaps = $"geo:{site.latitude},{site.longitude}?q={site.latitude},{site.longitude}({UnityWebRequestEscape(site.siteName)})";
-            Application.OpenURL(googleMaps);
-#endif
-        }
-        else
-        {
-#if UNITY_IOS
-            string appleMaps = $"http://maps.apple.com/?q={UnityWebRequestEscape(site.siteName)}";
-            Application.OpenURL(appleMaps);
-#else
-            string googleMapsWeb = $"https://www.google.com/maps/search/?api=1&query={UnityWebRequestEscape(site.siteName)}";
-            Application.OpenURL(googleMapsWeb);
-#endif
+        #if UNITY_IOS
+                string appleMaps = $"http://maps.apple.com/?ll={site.latitude},{site.longitude}";
+                Application.OpenURL(appleMaps);
+        #else
+                string googleMaps = $"geo:{site.latitude},{site.longitude}";
+                Application.OpenURL(googleMaps);
+        #endif
+                }
+                else
+                {
+        #if UNITY_IOS
+                string appleMaps = $"http://maps.apple.com/?ll=0,0";
+                Application.OpenURL(appleMaps);
+        #else
+                string googleMapsWeb = $"https://www.google.com/maps/search/?api=1&query=0,0";
+                Application.OpenURL(googleMapsWeb);
+        #endif
         }
     }
+
 
     string UnityWebRequestEscape(string value)
     {
