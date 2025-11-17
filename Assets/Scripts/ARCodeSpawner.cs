@@ -3,11 +3,10 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
-// Simple serializable mapping so you can set prefab per qrCodeName in Inspector
 [System.Serializable]
 public class QRPrefabMapping
 {
-    public string qrCodeName;   // must match the name in Reference Image Library
+    public string qrCodeName; // must match Reference Image Library
     public GameObject prefab;
 }
 
@@ -15,15 +14,17 @@ public class QRPrefabMapping
 public class ARCodeSpawner : MonoBehaviour
 {
     public List<QRPrefabMapping> mappings = new List<QRPrefabMapping>();
-
-    // optional: fallback prefab if nothing matches
     public GameObject defaultPrefab;
 
-    // Reference to MenuController so we can show popup
-    public MenuController menuController;
+    // Distance at which spawned object becomes hidden (meters)
+    public float hideDistance = 1f;
 
     private ARTrackedImageManager trackedImageManager;
+
+    // Track spawned objects
     private Dictionary<string, GameObject> spawnedObjects = new Dictionary<string, GameObject>();
+    private Dictionary<string, Transform> trackedImageTransforms = new Dictionary<string, Transform>();
+
 
     void Awake()
     {
@@ -40,77 +41,91 @@ public class ARCodeSpawner : MonoBehaviour
         trackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
+
     void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs args)
     {
-        // Added
+        // === Added images ===
         foreach (var added in args.added)
         {
+            trackedImageTransforms[added.referenceImage.name] = added.transform;
             SpawnOrUpdate(added);
-            // open popup for this qr
-            menuController?.ShowPopupForQRCode(added.referenceImage.name);
         }
 
-        // Updated
+        // === Updated images ===
         foreach (var updated in args.updated)
         {
+            string key = updated.referenceImage.name;
+            trackedImageTransforms[key] = updated.transform;
+
             if (updated.trackingState == TrackingState.Tracking)
             {
                 SpawnOrUpdate(updated);
-                // Optionally ensure popup for the currently tracked one is visible
-                menuController?.ShowPopupForQRCode(updated.referenceImage.name);
             }
             else
             {
-                // not tracking: hide associated object but keep it in dictionary if you prefer
-                if (spawnedObjects.ContainsKey(updated.referenceImage.name))
-                {
-                    spawnedObjects[updated.referenceImage.name].SetActive(false);
-                }
-
-                // Hide popup if the lost image is the one shown
-                menuController?.HidePopup();
+                // QR is not tracked -> hide spawned model
+                if (spawnedObjects.ContainsKey(key))
+                    spawnedObjects[key].SetActive(false);
             }
         }
 
-        // Removed
+        // === Removed images ===
         foreach (var removed in args.removed)
         {
-            // Destroy spawned object and remove mapping
-            if (spawnedObjects.ContainsKey(removed.referenceImage.name))
+            string key = removed.referenceImage.name;
+
+            if (spawnedObjects.ContainsKey(key))
             {
-                Destroy(spawnedObjects[removed.referenceImage.name]);
-                spawnedObjects.Remove(removed.referenceImage.name);
+                Destroy(spawnedObjects[key]);
+                spawnedObjects.Remove(key);
             }
 
-            // If popup was showing for this, hide it
-            menuController?.HidePopup();
+            if (trackedImageTransforms.ContainsKey(key))
+                trackedImageTransforms.Remove(key);
         }
     }
+
+
+    void Update()
+    {
+        // Distance-based hiding
+        foreach (var pair in spawnedObjects)
+        {
+            string key = pair.Key;
+            GameObject obj = pair.Value;
+
+            if (!trackedImageTransforms.ContainsKey(key)) continue;
+
+            float distance = Vector3.Distance(Camera.main.transform.position, trackedImageTransforms[key].position);
+
+            obj.SetActive(distance <= hideDistance);
+        }
+    }
+
 
     void SpawnOrUpdate(ARTrackedImage trackedImage)
     {
         string imageName = trackedImage.referenceImage.name;
 
         GameObject prefabToSpawn = GetPrefabForQRCode(imageName) ?? defaultPrefab;
-
         if (prefabToSpawn == null) return;
 
         if (!spawnedObjects.ContainsKey(imageName))
         {
             GameObject newObj = Instantiate(prefabToSpawn, trackedImage.transform.position, trackedImage.transform.rotation);
-            // Parent to the tracked image so it follows automatically (optional)
             newObj.transform.SetParent(trackedImage.transform, true);
+
             spawnedObjects.Add(imageName, newObj);
         }
         else
         {
             GameObject existing = spawnedObjects[imageName];
             existing.SetActive(true);
-            // Update transform so it matches the trackedImage
             existing.transform.position = trackedImage.transform.position;
             existing.transform.rotation = trackedImage.transform.rotation;
         }
     }
+
 
     GameObject GetPrefabForQRCode(string qrCodeName)
     {

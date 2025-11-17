@@ -30,6 +30,7 @@ struct Dictionary_2_t83AA7C7AB492C46D749D8888471CCA31450E89BB;
 struct Dictionary_2_t34E71F5B01DCFB4F948FEE124671D9C5832E00F5;
 struct Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180;
 struct Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE;
+struct Dictionary_2_tF51794D0F14665A9868A7AA446CD5BD75C8663C4;
 struct Dictionary_2_t5C5FBA59FA0804C53874B619629A7AF7EA74A119;
 struct Dictionary_2_tCDC65F572855EBDD1C12CEE33EBEBE0131F60C9C;
 struct Dictionary_2_t384D2A0FF42BF1302A3F513FC32DB105F1CD5455;
@@ -5428,9 +5429,10 @@ struct ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028  : public MonoBeh
 {
 	List_1_t5ED582125B73292762393CBDA10325CAC120CB32* ___mappings;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___defaultPrefab;
-	MenuController_t17F68C6A3294916109B163214554B7F97C7E8427* ___menuController;
+	float ___hideDistance;
 	ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4* ___trackedImageManager;
 	Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* ___spawnedObjects;
+	Dictionary_2_tF51794D0F14665A9868A7AA446CD5BD75C8663C4* ___trackedImageTransforms;
 };
 struct ARContactSpawnTrigger_tD8F640BDF4DDE156DDC4531321BC98B245945267  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -6643,9 +6645,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9233[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9237[2] = 
 {
 	static_cast<int32_t>(offsetof(QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C, ___qrCodeName)),static_cast<int32_t>(offsetof(QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C, ___prefab)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9238[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9238[6] = 
 {
-	static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___mappings)),static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___defaultPrefab)),static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___menuController)),static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___trackedImageManager)),static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___spawnedObjects)),};
+	static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___mappings)),static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___defaultPrefab)),static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___hideDistance)),static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___trackedImageManager)),static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___spawnedObjects)),static_cast<int32_t>(offsetof(ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028, ___trackedImageTransforms)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9239[5] = 
 {
 	static_cast<int32_t>(offsetof(InfoPopupController_t4BDE33F8AA6EDB4DFC23CB36BDF93DD91BAA188B, ___infoPopup)),static_cast<int32_t>(offsetof(InfoPopupController_t4BDE33F8AA6EDB4DFC23CB36BDF93DD91BAA188B, ___titleText)),static_cast<int32_t>(offsetof(InfoPopupController_t4BDE33F8AA6EDB4DFC23CB36BDF93DD91BAA188B, ___descriptionText)),static_cast<int32_t>(offsetof(InfoPopupController_t4BDE33F8AA6EDB4DFC23CB36BDF93DD91BAA188B, ___thumbnailImage)),static_cast<int32_t>(offsetof(InfoPopupController_t4BDE33F8AA6EDB4DFC23CB36BDF93DD91BAA188B, ___closeButton)),};

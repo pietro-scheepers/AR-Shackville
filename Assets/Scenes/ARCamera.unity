@@ -1606,13 +1606,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QRCodeSpawner
   mappings:
   - qrCodeName: CubeQR
-    prefab: {fileID: 2630332850372906278, guid: 10fce53aaf8b0984b988f69008a5f114, type: 3}
+    prefab: {fileID: 5502954775802864094, guid: b379b3bcbb3f23b4791d035475a2b7e0, type: 3}
   - qrCodeName: SoundQR
     prefab: {fileID: 1066524028172676089, guid: 02d7d9f6d29af4e47aeb2df3671e6caf, type: 3}
   - qrCodeName: ElkQR
     prefab: {fileID: 711460962115037582, guid: 180a7a67a199be24bb1e1adb06162c13, type: 3}
-  defaultPrefab: {fileID: 0}
-  menuController: {fileID: 0}
+  defaultPrefab: {fileID: 2630332850372906278, guid: 10fce53aaf8b0984b988f69008a5f114, type: 3}
+  hideDistance: 2
 --- !u!1 &723533710
 GameObject:
   m_ObjectHideFlags: 0

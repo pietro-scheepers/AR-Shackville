@@ -12,6 +12,7 @@ extern void ARCodeSpawner_Awake_m9E50F3984FA215D8A09BC8DEE94F884360F9782E (void)
 extern void ARCodeSpawner_OnEnable_m810416D944CD28250D64D7765872B84EB5346DE2 (void);
 extern void ARCodeSpawner_OnDisable_m5021A13209AE02E6FCA37C4D8FD1DF6F8C29A840 (void);
 extern void ARCodeSpawner_OnTrackedImagesChanged_m07B661B34A2A18ABBB99188FB8DEC197C6F62606 (void);
+extern void ARCodeSpawner_Update_mB31BAB18C996D836AB2F5D2C5DE2C1D68948E9AC (void);
 extern void ARCodeSpawner_SpawnOrUpdate_m68FCB226597F93C02370978D75C3AE86124C8819 (void);
 extern void ARCodeSpawner_GetPrefabForQRCode_m631D00D590830F3837DD1DBAB97F4C832EB1E4FD (void);
 extern void ARCodeSpawner__ctor_m59B6DAEF36CA4F0375D3CC27AC74DC97A8B501D1 (void);
@@ -133,13 +134,14 @@ extern void U3CWaitUntilNextCardU3Ed__36_MoveNext_mEB6BA70FAED1CFCFF4A723EA3EAB8
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB2315FB1F67F06B37604285AD8F003E282D1607 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_Reset_m5E5CC9DFDC8C17DB423A7C7ECBCD4342A7754633 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_get_Current_mE7D77BA338B271D9E95117683B19436CFFF37229 (void);
-static Il2CppMethodPointer s_methodPointers[126] = 
+static Il2CppMethodPointer s_methodPointers[127] = 
 {
 	QRPrefabMapping__ctor_m348C41F8B2192055E9A88373B61D397CA54AD1C6,
 	ARCodeSpawner_Awake_m9E50F3984FA215D8A09BC8DEE94F884360F9782E,
 	ARCodeSpawner_OnEnable_m810416D944CD28250D64D7765872B84EB5346DE2,
 	ARCodeSpawner_OnDisable_m5021A13209AE02E6FCA37C4D8FD1DF6F8C29A840,
 	ARCodeSpawner_OnTrackedImagesChanged_m07B661B34A2A18ABBB99188FB8DEC197C6F62606,
+	ARCodeSpawner_Update_mB31BAB18C996D836AB2F5D2C5DE2C1D68948E9AC,
 	ARCodeSpawner_SpawnOrUpdate_m68FCB226597F93C02370978D75C3AE86124C8819,
 	ARCodeSpawner_GetPrefabForQRCode_m631D00D590830F3837DD1DBAB97F4C832EB1E4FD,
 	ARCodeSpawner__ctor_m59B6DAEF36CA4F0375D3CC27AC74DC97A8B501D1,
@@ -265,15 +267,16 @@ static Il2CppMethodPointer s_methodPointers[126] =
 extern void Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x06000063, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
+	{ 0x06000064, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[126] = 
+static const int32_t s_InvokerIndices[127] = 
 {
 	15299,
 	15299,
 	15299,
 	15299,
 	11385,
+	15299,
 	11614,
 	9953,
 	15299,
@@ -400,7 +403,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	126,
+	127,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

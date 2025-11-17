@@ -9772,6 +9772,9 @@ const Il2CppGenericInst GenInst_String_t_StylePropertyId_tA3B8A5213F5BA43F9C5443
 static const Il2CppType* GenInst_String_t_StylePropertyValue_tED32F617FABE99611B213BFCF9D1D909E7F141C2_Types[] = { (&String_t_0_0_0), (&StylePropertyValue_tED32F617FABE99611B213BFCF9D1D909E7F141C2_0_0_0) };
 extern const Il2CppGenericInst GenInst_String_t_StylePropertyValue_tED32F617FABE99611B213BFCF9D1D909E7F141C2;
 const Il2CppGenericInst GenInst_String_t_StylePropertyValue_tED32F617FABE99611B213BFCF9D1D909E7F141C2 = { 2, GenInst_String_t_StylePropertyValue_tED32F617FABE99611B213BFCF9D1D909E7F141C2_Types };
+static const Il2CppType* GenInst_String_t_Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_Types[] = { (&String_t_0_0_0), (&Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_0_0_0) };
+extern const Il2CppGenericInst GenInst_String_t_Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
+const Il2CppGenericInst GenInst_String_t_Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1 = { 2, GenInst_String_t_Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_Types };
 static const Il2CppType* GenInst_String_t_Type_t_Types[] = { (&String_t_0_0_0), (&Type_t_0_0_0) };
 extern const Il2CppGenericInst GenInst_String_t_Type_t;
 const Il2CppGenericInst GenInst_String_t_Type_t = { 2, GenInst_String_t_Type_t_Types };
@@ -33521,7 +33524,7 @@ static const Il2CppType* GenInst_TextureResource_t6EF8F60046828C34697CE7CD52B678
 extern const Il2CppGenericInst GenInst_TextureResource_t6EF8F60046828C34697CE7CD52B67873DBD2D719;
 const Il2CppGenericInst GenInst_TextureResource_t6EF8F60046828C34697CE7CD52B67873DBD2D719 = { 1, GenInst_TextureResource_t6EF8F60046828C34697CE7CD52B67873DBD2D719_Types };
 IL2CPP_EXTERN_C const Il2CppGenericInst* const g_Il2CppGenericInstTable[];
-const Il2CppGenericInst* const g_Il2CppGenericInstTable[8969] = 
+const Il2CppGenericInst* const g_Il2CppGenericInstTable[8970] = 
 {
 	&GenInst_T_tFCD5550B9927C916AC3132AE892A1E2BFED7B30F,
 	&GenInst_T_tE8C50EB07B4FCF7B8EE464D07E9E03D83FC46CBE,
@@ -34576,6 +34579,7 @@ const Il2CppGenericInst* const g_Il2CppGenericInstTable[8969] =
 	&GenInst_String_t_StyleComplexSelector_tE46C29F65FDBA48D3152781187401C8B55B7D8AD,
 	&GenInst_String_t_StylePropertyId_tA3B8A5213F5BA43F9C5443B27B165D744713BE69,
 	&GenInst_String_t_StylePropertyValue_tED32F617FABE99611B213BFCF9D1D909E7F141C2,
+	&GenInst_String_t_Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1,
 	&GenInst_String_t_Type_t,
 	&GenInst_String_t_UriParser_t920B0868286118827C08B08A15A9456AF6C19D81,
 	&GenInst_String_t_VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115,
