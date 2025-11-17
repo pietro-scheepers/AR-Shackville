@@ -1,0 +1,36 @@
+code .gitignore
+# Unity-generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+
+# Gradle and Android build files
+.gradle/
+*.apk
+*.aab
+*.keystore
+
+# Other automatically generated stuff
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svd
+*.userprefs
+
+# Crash and temporary files
+*.tmp
+*.bak
+*.swp
+*.lock
+
+# Visual Studio / Rider
+.vs/
+.idea/
