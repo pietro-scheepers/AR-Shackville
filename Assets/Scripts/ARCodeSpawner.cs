@@ -25,6 +25,10 @@ public class ARCodeSpawner : MonoBehaviour
     private Dictionary<string, GameObject> spawnedObjects = new Dictionary<string, GameObject>();
     private Dictionary<string, Transform> trackedImageTransforms = new Dictionary<string, Transform>();
 
+    //
+    // NEW — store the most recently spawned model
+    public Transform latestSpawnedModel { get; private set; }
+
 
     void Awake()
     {
@@ -112,17 +116,25 @@ public class ARCodeSpawner : MonoBehaviour
 
         if (!spawnedObjects.ContainsKey(imageName))
         {
+            // First time spawning this QR model
             GameObject newObj = Instantiate(prefabToSpawn, trackedImage.transform.position, trackedImage.transform.rotation);
             newObj.transform.SetParent(trackedImage.transform, true);
 
             spawnedObjects.Add(imageName, newObj);
+
+            // NEW — record latest spawned model
+            latestSpawnedModel = newObj.transform;
         }
         else
         {
+            // Already exists -> update its tracking position
             GameObject existing = spawnedObjects[imageName];
             existing.SetActive(true);
             existing.transform.position = trackedImage.transform.position;
             existing.transform.rotation = trackedImage.transform.rotation;
+
+            // NEW — also mark updated objects as "latest"
+            latestSpawnedModel = existing.transform;
         }
     }
 
