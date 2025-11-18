@@ -8,6 +8,9 @@
 UserSettings/
 MemoryCaptures/
 
+# Ignore custom project folders
+Assets/Tech spike/blend/
+
 # Gradle and Android build files
 .gradle/
 *.apk
