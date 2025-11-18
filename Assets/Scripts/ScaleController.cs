@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class ScaleController : MonoBehaviour
 {
-    // The currently spawned model
+    // The currently selected model (will be set by SelectionManager)
     public Transform currentModel;
 
     // How fast to scale
     public float scaleStep = 0.1f;
+
+    // Remove the Update() method that was automatically setting currentModel
+    // void Update() { ... }
 
     // Called by the + button
     public void IncreaseSize()

@@ -8,6 +8,8 @@
 
 
 extern void QRPrefabMapping__ctor_m348C41F8B2192055E9A88373B61D397CA54AD1C6 (void);
+extern void ARCodeSpawner_get_latestSpawnedModel_mCB04F57F8407C8A35AF0831883D22C0DB9AE13FF (void);
+extern void ARCodeSpawner_set_latestSpawnedModel_m41CC1EE9EE0046E3D8D88D20AC4E74D68698B1DE (void);
 extern void ARCodeSpawner_Awake_m9E50F3984FA215D8A09BC8DEE94F884360F9782E (void);
 extern void ARCodeSpawner_OnEnable_m810416D944CD28250D64D7765872B84EB5346DE2 (void);
 extern void ARCodeSpawner_OnDisable_m5021A13209AE02E6FCA37C4D8FD1DF6F8C29A840 (void);
@@ -31,6 +33,14 @@ extern void MenuController__ctor_m3E178AC64181BB1DB914E825C38F925DDE9C08C1 (void
 extern void U3CU3Ec__DisplayClass4_0__ctor_m42F696269D5C695BD5DCBB3BC55926B1C5E9A3C3 (void);
 extern void U3CU3Ec__DisplayClass4_0_U3CPopulateListU3Eb__0_m7893DD562CE25A6E2E9A687E5C4A9BED591FCB41 (void);
 extern void U3CU3Ec__DisplayClass4_0_U3CPopulateListU3Eb__1_mF27595EC82B1510D311A8FAD0B69FE34C85DFDBF (void);
+extern void ScaleController_IncreaseSize_m5CF43731C95493B5118E889E94D200C8D153B0F5 (void);
+extern void ScaleController_DecreaseSize_m22AC631BBB2517F07DFC17FA5D48AE81FA492D64 (void);
+extern void ScaleController__ctor_m96EA4B9E2FDC71ADF708466C60A52BB0A6DD75CF (void);
+extern void SelectionManager_Awake_mBA351387D1889A767AFD8E6649081BC9EA97899C (void);
+extern void SelectionManager_OnDestroy_mD3272E530DBA741181D14A057485D63A3F32C3CE (void);
+extern void SelectionManager_HandleTouch_mE3D04A4298E7864C7E91A354AD025E6BDDBDE6F5 (void);
+extern void SelectionManager__ctor_mB63C19EF82E0D6901A11D7794718430F86DA8E44 (void);
+extern void SelectionManager_U3CAwakeU3Eb__3_0_mED88DE4460609E7F845FD6AC93517ADF7E47C131 (void);
 extern void SiteData__ctor_mC263190058DEDB08FB90218B07D0F1880A89606E (void);
 extern void SiteManager_get_Instance_m9E2FAA6C5551318194964A7452E2BEBCB55058E5 (void);
 extern void SiteManager_set_Instance_m7D94BFBCC29FA248E49FA293D46F3816F43BFD99 (void);
@@ -134,9 +144,11 @@ extern void U3CWaitUntilNextCardU3Ed__36_MoveNext_mEB6BA70FAED1CFCFF4A723EA3EAB8
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB2315FB1F67F06B37604285AD8F003E282D1607 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_Reset_m5E5CC9DFDC8C17DB423A7C7ECBCD4342A7754633 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_get_Current_mE7D77BA338B271D9E95117683B19436CFFF37229 (void);
-static Il2CppMethodPointer s_methodPointers[127] = 
+static Il2CppMethodPointer s_methodPointers[137] = 
 {
 	QRPrefabMapping__ctor_m348C41F8B2192055E9A88373B61D397CA54AD1C6,
+	ARCodeSpawner_get_latestSpawnedModel_mCB04F57F8407C8A35AF0831883D22C0DB9AE13FF,
+	ARCodeSpawner_set_latestSpawnedModel_m41CC1EE9EE0046E3D8D88D20AC4E74D68698B1DE,
 	ARCodeSpawner_Awake_m9E50F3984FA215D8A09BC8DEE94F884360F9782E,
 	ARCodeSpawner_OnEnable_m810416D944CD28250D64D7765872B84EB5346DE2,
 	ARCodeSpawner_OnDisable_m5021A13209AE02E6FCA37C4D8FD1DF6F8C29A840,
@@ -160,6 +172,14 @@ static Il2CppMethodPointer s_methodPointers[127] =
 	U3CU3Ec__DisplayClass4_0__ctor_m42F696269D5C695BD5DCBB3BC55926B1C5E9A3C3,
 	U3CU3Ec__DisplayClass4_0_U3CPopulateListU3Eb__0_m7893DD562CE25A6E2E9A687E5C4A9BED591FCB41,
 	U3CU3Ec__DisplayClass4_0_U3CPopulateListU3Eb__1_mF27595EC82B1510D311A8FAD0B69FE34C85DFDBF,
+	ScaleController_IncreaseSize_m5CF43731C95493B5118E889E94D200C8D153B0F5,
+	ScaleController_DecreaseSize_m22AC631BBB2517F07DFC17FA5D48AE81FA492D64,
+	ScaleController__ctor_m96EA4B9E2FDC71ADF708466C60A52BB0A6DD75CF,
+	SelectionManager_Awake_mBA351387D1889A767AFD8E6649081BC9EA97899C,
+	SelectionManager_OnDestroy_mD3272E530DBA741181D14A057485D63A3F32C3CE,
+	SelectionManager_HandleTouch_mE3D04A4298E7864C7E91A354AD025E6BDDBDE6F5,
+	SelectionManager__ctor_mB63C19EF82E0D6901A11D7794718430F86DA8E44,
+	SelectionManager_U3CAwakeU3Eb__3_0_mED88DE4460609E7F845FD6AC93517ADF7E47C131,
 	SiteData__ctor_mC263190058DEDB08FB90218B07D0F1880A89606E,
 	SiteManager_get_Instance_m9E2FAA6C5551318194964A7452E2BEBCB55058E5,
 	SiteManager_set_Instance_m7D94BFBCC29FA248E49FA293D46F3816F43BFD99,
@@ -267,11 +287,13 @@ static Il2CppMethodPointer s_methodPointers[127] =
 extern void Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x06000064, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
+	{ 0x0600006E, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[127] = 
+static const int32_t s_InvokerIndices[137] = 
 {
 	15299,
+	15104,
+	11614,
 	15299,
 	15299,
 	15299,
@@ -295,6 +317,14 @@ static const int32_t s_InvokerIndices[127] =
 	15299,
 	15299,
 	15299,
+	15299,
+	15299,
+	15299,
+	15299,
+	15299,
+	11965,
+	15299,
+	11965,
 	15299,
 	26270,
 	25094,
@@ -403,7 +433,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	127,
+	137,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,
