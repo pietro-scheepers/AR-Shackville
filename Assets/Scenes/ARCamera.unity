@@ -355,6 +355,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScaleController
   currentModel: {fileID: 0}
   scaleStep: 0.1
+  minScale: 0.1
+  maxScale: 10
 --- !u!4 &46777040
 Transform:
   m_ObjectHideFlags: 0
@@ -490,6 +492,7 @@ GameObject:
   - component: {fileID: 73308284}
   - component: {fileID: 73308283}
   - component: {fileID: 73308282}
+  - component: {fileID: 73308285}
   m_Layer: 5
   m_Name: Plus
   m_TagString: Untagged
@@ -560,19 +563,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 73308283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 46777039}
-        m_TargetAssemblyTypeName: ScaleController, Assembly-CSharp
-        m_MethodName: IncreaseSize
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &73308283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,6 +602,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73308280}
   m_CullTransparentMesh: 1
+--- !u!114 &73308285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73308280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46777039}
+          m_TargetAssemblyTypeName: ScaleController, Assembly-CSharp
+          m_MethodName: StartIncreasing
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46777039}
+          m_TargetAssemblyTypeName: ScaleController, Assembly-CSharp
+          m_MethodName: StopIncreasing
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &212149203 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1699437215193936893, guid: 4a1ebfd3890accf48a57051b1e20448b, type: 3}
@@ -1828,27 +1864,27 @@ MonoBehaviour:
     prefab: {fileID: 7410158763834245994, guid: ac6a89440c25ae64dbd7c0d41871f06c, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     rotationOffset: {x: -90, y: 0, z: 0}
-    scale: 0.5
+    scale: 1
   - qrCodeName: ferQR
     prefab: {fileID: 8029563151607983696, guid: 4c8d75caf1c2db144bd0b29c1e440a7d, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     rotationOffset: {x: -90, y: 0, z: 0}
-    scale: 0.5
+    scale: 1
   - qrCodeName: ladyBirdQR
     prefab: {fileID: 3452099068423418383, guid: de25f68e2ceb1e84cb1fa00248d8fe29, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     rotationOffset: {x: -90, y: 0, z: 0}
-    scale: 0.5
+    scale: 1
   - qrCodeName: proteaQR
     prefab: {fileID: 5762247152649791345, guid: 596ec1c569e04404c859bc2face45024, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     rotationOffset: {x: -90, y: 0, z: 0}
-    scale: 0.5
+    scale: 1
   - qrCodeName: coneBushQR
     prefab: {fileID: 5752584339440299781, guid: e7da7a0162ea53f4e91d35499a75f59f, type: 3}
     positionOffset: {x: 0, y: 0, z: 0}
     rotationOffset: {x: -90, y: 0, z: 0}
-    scale: 0.5
+    scale: 1
   defaultPrefab: {fileID: 8029563151607983696, guid: 4c8d75caf1c2db144bd0b29c1e440a7d, type: 3}
   hideDistance: 5
 --- !u!1 &723533710
@@ -2473,6 +2509,7 @@ GameObject:
   - component: {fileID: 1134417519}
   - component: {fileID: 1134417518}
   - component: {fileID: 1134417517}
+  - component: {fileID: 1134417520}
   m_Layer: 5
   m_Name: Minus
   m_TagString: Untagged
@@ -2594,6 +2631,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134417515}
   m_CullTransparentMesh: 1
+--- !u!114 &1134417520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134417515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46777039}
+          m_TargetAssemblyTypeName: ScaleController, Assembly-CSharp
+          m_MethodName: StartDecreasing
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46777039}
+          m_TargetAssemblyTypeName: ScaleController, Assembly-CSharp
+          m_MethodName: StopDecreasing
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1323550131
 GameObject:
   m_ObjectHideFlags: 0
