@@ -1074,10 +1074,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2512387470890420967, guid: 48cb3fb68c91eb94999fd99957eb0cae, type: 3}
       insertIndex: 0
       addedObject: {fileID: 436358034}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2512387470528047719, guid: 48cb3fb68c91eb94999fd99957eb0cae, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 608830362}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48cb3fb68c91eb94999fd99957eb0cae, type: 3}
 --- !u!114 &331264286 stripped
 MonoBehaviour:
@@ -1470,25 +1467,6 @@ MonoBehaviour:
     m_ManualQueueValue: 0
     m_ManualQueueTargetFrame: 0
   m_BlockSpawnWhenInteractorHasSelection: 1
---- !u!1 &608830356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2512387470528047719, guid: 48cb3fb68c91eb94999fd99957eb0cae, type: 3}
-  m_PrefabInstance: {fileID: 331264285}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &608830362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608830356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9ee4c9cd2cd37448aa6dde21ece8521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectionManager
-  scaleController: {fileID: 46777039}
-  arCamera: {fileID: 1553500806}
 --- !u!1 &648778007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,25 +1807,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ba7e3c2fe91d7409f4819bbba5e39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QRCodeSpawner
+  scaleController: {fileID: 46777039}
   mappings:
   - qrCodeName: CubeQR
     prefab: {fileID: 5502954775802864094, guid: b379b3bcbb3f23b4791d035475a2b7e0, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: 0, y: 0, z: 0}
+    scale: 1
   - qrCodeName: SoundQR
     prefab: {fileID: 1066524028172676089, guid: 02d7d9f6d29af4e47aeb2df3671e6caf, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: 0, y: 0, z: 0}
+    scale: 1
   - qrCodeName: ElkQR
     prefab: {fileID: 711460962115037582, guid: 180a7a67a199be24bb1e1adb06162c13, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: 0, y: 0, z: 0}
+    scale: 1
   - qrCodeName: shackQR
     prefab: {fileID: 7410158763834245994, guid: ac6a89440c25ae64dbd7c0d41871f06c, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: -90, y: 0, z: 0}
+    scale: 0.5
   - qrCodeName: ferQR
     prefab: {fileID: 8029563151607983696, guid: 4c8d75caf1c2db144bd0b29c1e440a7d, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: -90, y: 0, z: 0}
+    scale: 0.5
   - qrCodeName: ladyBirdQR
     prefab: {fileID: 3452099068423418383, guid: de25f68e2ceb1e84cb1fa00248d8fe29, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: -90, y: 0, z: 0}
+    scale: 0.5
   - qrCodeName: proteaQR
     prefab: {fileID: 5762247152649791345, guid: 596ec1c569e04404c859bc2face45024, type: 3}
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: -90, y: 0, z: 0}
+    scale: 0.5
   - qrCodeName: coneBushQR
     prefab: {fileID: 5752584339440299781, guid: e7da7a0162ea53f4e91d35499a75f59f, type: 3}
-  defaultPrefab: {fileID: 2630332850372906278, guid: 10fce53aaf8b0984b988f69008a5f114, type: 3}
-  hideDistance: 2
+    positionOffset: {x: 0, y: 0, z: 0}
+    rotationOffset: {x: -90, y: 0, z: 0}
+    scale: 0.5
+  defaultPrefab: {fileID: 8029563151607983696, guid: 4c8d75caf1c2db144bd0b29c1e440a7d, type: 3}
+  hideDistance: 5
 --- !u!1 &723533710
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,11 +2892,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452451541}
   m_CullTransparentMesh: 1
---- !u!20 &1553500806 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2512387469002778331, guid: 48cb3fb68c91eb94999fd99957eb0cae, type: 3}
-  m_PrefabInstance: {fileID: 331264285}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1562005414
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,22 +1,19 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Import the Input System namespace (if using new input system)
+using UnityEngine.InputSystem;
 
 public class SelectionManager : MonoBehaviour
 {
-    // Reference to the ScaleController to set the current model
     public ScaleController scaleController;
-    public Camera arCamera; // Reference to your AR camera
+    public Camera arCamera;
 
-    // Use the new Unity Input System for touch handling
     private InputAction touchAction;
+
+    private Highlightable lastHighlighted;
 
     void Awake()
     {
-        // Basic setup for the new Input System (adjust based on your actual setup)
-        // This assumes you have an Input Action Asset set up.
-        // For a simple single touch setup without an asset:
-        touchAction = new InputAction(binding: "*/{PrimaryTouchContact}");
-        touchAction.performed += ctx => HandleTouch(ctx);
+        touchAction = new InputAction(binding: "<Touchscreen>/primaryTouch/press");
+        touchAction.performed += ctx => OnTouch();
         touchAction.Enable();
     }
 
@@ -25,27 +22,41 @@ public class SelectionManager : MonoBehaviour
         touchAction.Disable();
     }
 
-    private void HandleTouch(InputAction.CallbackContext context)
+    private void OnTouch()
     {
-        // Get the touch position from the screen
-        Vector2 touchPosition = Touchscreen.current.primaryTouch.position.ReadValue();
+        if (Touchscreen.current == null)
+            return;
 
-        Ray ray = arCamera.ScreenPointToRay(touchPosition);
+        var touch = Touchscreen.current.primaryTouch;
+        if (!touch.press.isPressed) return;
+
+        Vector2 tapPos = touch.position.ReadValue();
+
+        Ray ray = arCamera.ScreenPointToRay(tapPos);
         RaycastHit hit;
 
-        // Perform the raycast
         if (Physics.Raycast(ray, out hit))
         {
-            // Check if the hit object is one of your spawned models
             if (hit.collider.CompareTag("Selectable"))
             {
-                // Set the ScaleController's current model to the tapped object
-                if (scaleController != null)
-                {
-                    scaleController.currentModel = hit.transform;
-                    Debug.Log("Selected object: " + hit.transform.name);
-                    // You can add visual feedback here (e.g., a highlight/outline)
-                }
+                Transform selected = hit.transform;
+
+                // Update ScaleController target
+                scaleController.currentModel = selected;
+
+                // Remove highlight from previous
+                if (lastHighlighted != null)
+                    lastHighlighted.RemoveHighlight();
+
+                // Add highlight to new
+                Highlightable h = selected.GetComponent<Highlightable>();
+                if (h == null)
+                    h = selected.gameObject.AddComponent<Highlightable>();
+
+                h.ApplyHighlight();
+                lastHighlighted = h;
+
+                Debug.Log("Selected: " + selected.name);
             }
         }
     }

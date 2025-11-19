@@ -6,29 +6,30 @@ using UnityEngine.XR.ARSubsystems;
 [System.Serializable]
 public class QRPrefabMapping
 {
-    public string qrCodeName; // must match Reference Image Library
+    public string qrCodeName;      // Must match Reference Image Library
     public GameObject prefab;
+
+    public Vector3 positionOffset; // Local offset from QR center
+    public Vector3 rotationOffset; // Euler angle offset
+    public float scale = 1f;       // Uniform scale
 }
 
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class ARCodeSpawner : MonoBehaviour
 {
-    public List<QRPrefabMapping> mappings = new List<QRPrefabMapping>();
+    public ScaleController scaleController;
+
+    public List<QRPrefabMapping> mappings;
     public GameObject defaultPrefab;
 
-    // Distance at which spawned object becomes hidden (meters)
     public float hideDistance = 1f;
 
     private ARTrackedImageManager trackedImageManager;
 
-    // Track spawned objects
-    private Dictionary<string, GameObject> spawnedObjects = new Dictionary<string, GameObject>();
-    private Dictionary<string, Transform> trackedImageTransforms = new Dictionary<string, Transform>();
+    private GameObject currentSpawnedObject = null;
+    private Transform currentImageTransform = null;
 
-    //
-    // NEW — store the most recently spawned model
     public Transform latestSpawnedModel { get; private set; }
-
 
     void Awake()
     {
@@ -45,106 +46,135 @@ public class ARCodeSpawner : MonoBehaviour
         trackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
-
     void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs args)
     {
-        // === Added images ===
+        // NEW QR detected
         foreach (var added in args.added)
-        {
-            trackedImageTransforms[added.referenceImage.name] = added.transform;
-            SpawnOrUpdate(added);
-        }
+            SpawnFresh(added);
 
-        // === Updated images ===
+        // Existing QR repositioned
         foreach (var updated in args.updated)
         {
-            string key = updated.referenceImage.name;
-            trackedImageTransforms[key] = updated.transform;
-
             if (updated.trackingState == TrackingState.Tracking)
-            {
-                SpawnOrUpdate(updated);
-            }
-            else
-            {
-                // QR is not tracked -> hide spawned model
-                if (spawnedObjects.ContainsKey(key))
-                    spawnedObjects[key].SetActive(false);
-            }
+                UpdateExisting(updated);
+            else if (currentSpawnedObject != null)
+                currentSpawnedObject.SetActive(false);
         }
 
-        // === Removed images ===
+        // QR removed from view
         foreach (var removed in args.removed)
         {
-            string key = removed.referenceImage.name;
-
-            if (spawnedObjects.ContainsKey(key))
+            if (currentSpawnedObject != null)
             {
-                Destroy(spawnedObjects[key]);
-                spawnedObjects.Remove(key);
+                Destroy(currentSpawnedObject);
+                currentSpawnedObject = null;
             }
-
-            if (trackedImageTransforms.ContainsKey(key))
-                trackedImageTransforms.Remove(key);
+            currentImageTransform = null;
         }
     }
-
 
     void Update()
     {
-        // Distance-based hiding
-        foreach (var pair in spawnedObjects)
-        {
-            string key = pair.Key;
-            GameObject obj = pair.Value;
+        if (currentSpawnedObject == null || currentImageTransform == null)
+            return;
 
-            if (!trackedImageTransforms.ContainsKey(key)) continue;
+        float distance = Vector3.Distance(
+            Camera.main.transform.position,
+            currentImageTransform.position);
 
-            float distance = Vector3.Distance(Camera.main.transform.position, trackedImageTransforms[key].position);
-
-            obj.SetActive(distance <= hideDistance);
-        }
+        currentSpawnedObject.SetActive(distance <= hideDistance);
     }
 
-
-    void SpawnOrUpdate(ARTrackedImage trackedImage)
+    // -----------------------------------------------------
+    // Spawn a NEW object (destroy previous one)
+    // -----------------------------------------------------
+    void SpawnFresh(ARTrackedImage trackedImage)
     {
-        string imageName = trackedImage.referenceImage.name;
+        if (currentSpawnedObject != null)
+            Destroy(currentSpawnedObject);
 
-        GameObject prefabToSpawn = GetPrefabForQRCode(imageName) ?? defaultPrefab;
-        if (prefabToSpawn == null) return;
-
-        if (!spawnedObjects.ContainsKey(imageName))
-        {
-            // First time spawning this QR model
-            GameObject newObj = Instantiate(prefabToSpawn, trackedImage.transform.position, trackedImage.transform.rotation);
-            newObj.transform.SetParent(trackedImage.transform, true);
-
-            spawnedObjects.Add(imageName, newObj);
-
-            // NEW — record latest spawned model
-            latestSpawnedModel = newObj.transform;
-        }
-        else
-        {
-            // Already exists -> update its tracking position
-            GameObject existing = spawnedObjects[imageName];
-            existing.SetActive(true);
-            existing.transform.position = trackedImage.transform.position;
-            existing.transform.rotation = trackedImage.transform.rotation;
-
-            // NEW — also mark updated objects as "latest"
-            latestSpawnedModel = existing.transform;
-        }
+        currentSpawnedObject = CreateSpawnedObject(trackedImage);
+        currentImageTransform = trackedImage.transform;
     }
 
+    // -----------------------------------------------------
+    // Update position + rotation of existing object
+    // -----------------------------------------------------
+    void UpdateExisting(ARTrackedImage trackedImage)
+    {
+        if (currentSpawnedObject == null)
+        {
+            SpawnFresh(trackedImage);
+            return;
+        }
 
-    GameObject GetPrefabForQRCode(string qrCodeName)
+        var mapping = GetMapping(trackedImage.referenceImage.name);
+
+        Vector3 pos = trackedImage.transform.position;
+        Quaternion rot = trackedImage.transform.rotation;
+
+        if (mapping != null)
+        {
+            rot *= Quaternion.Euler(mapping.rotationOffset);
+            pos += rot * mapping.positionOffset;
+        }
+
+        currentSpawnedObject.transform.position = pos;
+        currentSpawnedObject.transform.rotation = rot;
+
+        currentSpawnedObject.SetActive(true);
+
+        latestSpawnedModel = currentSpawnedObject.transform;
+
+        if (scaleController != null)
+            scaleController.currentModel = latestSpawnedModel;
+
+        currentImageTransform = trackedImage.transform;
+    }
+
+    // -----------------------------------------------------
+    // Instantiate object with offset + scale
+    // -----------------------------------------------------
+    GameObject CreateSpawnedObject(ARTrackedImage trackedImage)
+    {
+        var mapping = GetMapping(trackedImage.referenceImage.name);
+
+        GameObject prefab = mapping?.prefab ?? defaultPrefab;
+        if (prefab == null) return null;
+
+        Vector3 pos = trackedImage.transform.position;
+        Quaternion rot = trackedImage.transform.rotation;
+
+        if (mapping != null)
+        {
+            rot *= Quaternion.Euler(mapping.rotationOffset);
+            pos += rot * mapping.positionOffset;
+        }
+
+        GameObject obj = Instantiate(prefab, pos, rot);
+
+        if (mapping != null)
+            obj.transform.localScale = Vector3.one * mapping.scale;
+
+        obj.transform.SetParent(trackedImage.transform, true);
+
+        latestSpawnedModel = obj.transform;
+
+        if (scaleController != null)
+            scaleController.currentModel = latestSpawnedModel;
+
+        return obj;
+    }
+
+    // -----------------------------------------------------
+    // Lookup mapping
+    // -----------------------------------------------------
+    QRPrefabMapping GetMapping(string qrName)
     {
         foreach (var m in mappings)
         {
-            if (m.qrCodeName == qrCodeName)
-                return m.prefab;
+            if (m.qrCodeName == qrName)
+                return m;
         }
         return null;
     }
