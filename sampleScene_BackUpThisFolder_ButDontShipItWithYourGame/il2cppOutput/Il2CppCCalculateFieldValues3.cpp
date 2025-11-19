@@ -5555,6 +5555,10 @@ struct ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25  : public MonoB
 {
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___currentModel;
 	float ___scaleStep;
+	float ___minScale;
+	float ___maxScale;
+	bool ___isIncreasing;
+	bool ___isDecreasing;
 };
 struct SceneTemplate_RotateCube_tB6D99CC88F0E89517A2E6E071F0334FE69FB44CC  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -6683,9 +6687,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9241[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9242[3] = 
 {
 	static_cast<int32_t>(offsetof(MenuController_t17F68C6A3294916109B163214554B7F97C7E8427, ___listItemPrefab)),static_cast<int32_t>(offsetof(MenuController_t17F68C6A3294916109B163214554B7F97C7E8427, ___contentParent)),static_cast<int32_t>(offsetof(MenuController_t17F68C6A3294916109B163214554B7F97C7E8427, ___infoPopupController)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9243[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9243[6] = 
 {
-	static_cast<int32_t>(offsetof(ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25, ___currentModel)),static_cast<int32_t>(offsetof(ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25, ___scaleStep)),};
+	static_cast<int32_t>(offsetof(ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25, ___currentModel)),static_cast<int32_t>(offsetof(ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25, ___scaleStep)),static_cast<int32_t>(offsetof(ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25, ___minScale)),static_cast<int32_t>(offsetof(ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25, ___maxScale)),static_cast<int32_t>(offsetof(ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25, ___isIncreasing)),static_cast<int32_t>(offsetof(ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25, ___isDecreasing)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9244[4] = 
 {
 	static_cast<int32_t>(offsetof(SelectionManager_t03DFDB72964646E3F005DC6A1346AC5C319D471D, ___scaleController)),static_cast<int32_t>(offsetof(SelectionManager_t03DFDB72964646E3F005DC6A1346AC5C319D471D, ___arCamera)),static_cast<int32_t>(offsetof(SelectionManager_t03DFDB72964646E3F005DC6A1346AC5C319D471D, ___touchAction)),static_cast<int32_t>(offsetof(SelectionManager_t03DFDB72964646E3F005DC6A1346AC5C319D471D, ___lastHighlighted)),};

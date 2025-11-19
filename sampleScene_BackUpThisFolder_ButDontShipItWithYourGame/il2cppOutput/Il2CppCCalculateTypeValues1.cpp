@@ -45398,6 +45398,10 @@ struct ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25  : public MonoB
 {
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___currentModel;
 	float ___scaleStep;
+	float ___minScale;
+	float ___maxScale;
+	bool ___isIncreasing;
+	bool ___isDecreasing;
 };
 struct SceneTemplate_RotateCube_tB6D99CC88F0E89517A2E6E071F0334FE69FB44CC  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {

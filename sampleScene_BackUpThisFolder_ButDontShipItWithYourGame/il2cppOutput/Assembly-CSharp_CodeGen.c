@@ -39,8 +39,14 @@ extern void MenuController__ctor_m3E178AC64181BB1DB914E825C38F925DDE9C08C1 (void
 extern void U3CU3Ec__DisplayClass4_0__ctor_m42F696269D5C695BD5DCBB3BC55926B1C5E9A3C3 (void);
 extern void U3CU3Ec__DisplayClass4_0_U3CPopulateListU3Eb__0_m7893DD562CE25A6E2E9A687E5C4A9BED591FCB41 (void);
 extern void U3CU3Ec__DisplayClass4_0_U3CPopulateListU3Eb__1_mF27595EC82B1510D311A8FAD0B69FE34C85DFDBF (void);
-extern void ScaleController_IncreaseSize_m5CF43731C95493B5118E889E94D200C8D153B0F5 (void);
-extern void ScaleController_DecreaseSize_m22AC631BBB2517F07DFC17FA5D48AE81FA492D64 (void);
+extern void ScaleController_Update_m6A844291B5AA03FE16BF9B34524021A8D4EA2A14 (void);
+extern void ScaleController_StartIncreasing_mBF483CC7C435918310F60304636C59D08C888E72 (void);
+extern void ScaleController_StopIncreasing_m539E70FBE47B9A57DA93B3E25480FFF6CDDAF0C3 (void);
+extern void ScaleController_StartDecreasing_m13D8CCE0B084C736A386058125E0358B71837536 (void);
+extern void ScaleController_StopDecreasing_mA850A6F4EF24415119A17479A1596E1C6FFAA95C (void);
+extern void ScaleController_ScaleUp_mF74F5799AA2250F111E120DDEA6AFEAF41C61541 (void);
+extern void ScaleController_ScaleDown_mBFB1EB10035C11421F4667C20B69B59A3F3A927F (void);
+extern void ScaleController_ClampScale_m3C95D0C0FE092F2BB749854BAF946F583404D6FE (void);
 extern void ScaleController__ctor_m96EA4B9E2FDC71ADF708466C60A52BB0A6DD75CF (void);
 extern void SelectionManager_Awake_mBA351387D1889A767AFD8E6649081BC9EA97899C (void);
 extern void SelectionManager_OnDestroy_mD3272E530DBA741181D14A057485D63A3F32C3CE (void);
@@ -150,7 +156,7 @@ extern void U3CWaitUntilNextCardU3Ed__36_MoveNext_mEB6BA70FAED1CFCFF4A723EA3EAB8
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDB2315FB1F67F06B37604285AD8F003E282D1607 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_Reset_m5E5CC9DFDC8C17DB423A7C7ECBCD4342A7754633 (void);
 extern void U3CWaitUntilNextCardU3Ed__36_System_Collections_IEnumerator_get_Current_mE7D77BA338B271D9E95117683B19436CFFF37229 (void);
-static Il2CppMethodPointer s_methodPointers[143] = 
+static Il2CppMethodPointer s_methodPointers[149] = 
 {
 	QRPrefabMapping__ctor_m348C41F8B2192055E9A88373B61D397CA54AD1C6,
 	ARCodeSpawner_get_latestSpawnedModel_mCB04F57F8407C8A35AF0831883D22C0DB9AE13FF,
@@ -184,8 +190,14 @@ static Il2CppMethodPointer s_methodPointers[143] =
 	U3CU3Ec__DisplayClass4_0__ctor_m42F696269D5C695BD5DCBB3BC55926B1C5E9A3C3,
 	U3CU3Ec__DisplayClass4_0_U3CPopulateListU3Eb__0_m7893DD562CE25A6E2E9A687E5C4A9BED591FCB41,
 	U3CU3Ec__DisplayClass4_0_U3CPopulateListU3Eb__1_mF27595EC82B1510D311A8FAD0B69FE34C85DFDBF,
-	ScaleController_IncreaseSize_m5CF43731C95493B5118E889E94D200C8D153B0F5,
-	ScaleController_DecreaseSize_m22AC631BBB2517F07DFC17FA5D48AE81FA492D64,
+	ScaleController_Update_m6A844291B5AA03FE16BF9B34524021A8D4EA2A14,
+	ScaleController_StartIncreasing_mBF483CC7C435918310F60304636C59D08C888E72,
+	ScaleController_StopIncreasing_m539E70FBE47B9A57DA93B3E25480FFF6CDDAF0C3,
+	ScaleController_StartDecreasing_m13D8CCE0B084C736A386058125E0358B71837536,
+	ScaleController_StopDecreasing_mA850A6F4EF24415119A17479A1596E1C6FFAA95C,
+	ScaleController_ScaleUp_mF74F5799AA2250F111E120DDEA6AFEAF41C61541,
+	ScaleController_ScaleDown_mBFB1EB10035C11421F4667C20B69B59A3F3A927F,
+	ScaleController_ClampScale_m3C95D0C0FE092F2BB749854BAF946F583404D6FE,
 	ScaleController__ctor_m96EA4B9E2FDC71ADF708466C60A52BB0A6DD75CF,
 	SelectionManager_Awake_mBA351387D1889A767AFD8E6649081BC9EA97899C,
 	SelectionManager_OnDestroy_mD3272E530DBA741181D14A057485D63A3F32C3CE,
@@ -299,9 +311,9 @@ static Il2CppMethodPointer s_methodPointers[143] =
 extern void Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x06000074, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
+	{ 0x0600007A, Goal__ctor_m4452076EE88E564D97BBDD12E7011CAF34E275A3_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[143] = 
+static const int32_t s_InvokerIndices[149] = 
 {
 	15299,
 	15104,
@@ -330,6 +342,12 @@ static const int32_t s_InvokerIndices[143] =
 	11614,
 	9953,
 	11614,
+	15299,
+	15299,
+	15299,
+	15299,
+	15299,
+	15299,
 	15299,
 	15299,
 	15299,
@@ -451,7 +469,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	143,
+	149,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,
