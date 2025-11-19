@@ -1,3 +1,7 @@
+//Controls the menu functionality such as poluating the list
+//Pietro Scheepers
+//11 November 2025
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -7,8 +11,8 @@ using System.Collections.Generic;
 public class MenuController : MonoBehaviour
 {
     [Header("UI Prefab & Container")]
-    public GameObject listItemPrefab;      // Must have children: "SiteName" (TMP), "InfoButton" (Button), "MapsButton" (Button)
-    public Transform contentParent;        // Scroll View -> Viewport -> Content
+    public GameObject listItemPrefab;      
+    public Transform contentParent;        
 
     [Header("Popup")]
     public InfoPopupController infoPopupController;
@@ -22,7 +26,6 @@ public class MenuController : MonoBehaviour
     {
         if (SiteManager.Instance == null || listItemPrefab == null || contentParent == null) return;
 
-        // Clear previous children (if any)
         foreach (Transform t in contentParent) Destroy(t.gameObject);
 
         foreach (SiteData site in SiteManager.Instance.allSites)
@@ -108,7 +111,7 @@ public class MenuController : MonoBehaviour
         return UnityEngine.Networking.UnityWebRequest.EscapeURL(value);
     }
 
-    // Called by ARCodeSpawner to open popup by qrCodeName
+    
     public void ShowPopupForQRCode(string qrCodeName)
     {
         SiteData site = SiteManager.Instance?.GetSiteByQRCode(qrCodeName);
@@ -116,7 +119,6 @@ public class MenuController : MonoBehaviour
             infoPopupController.ShowInfo(site);
     }
 
-    // Called by ARCodeSpawner to hide the popup (e.g., when image lost)
     public void HidePopup()
     {
         infoPopupController.HideInfo();

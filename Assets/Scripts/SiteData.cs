@@ -1,3 +1,7 @@
+//Used to create a site class containing information about the site
+//Pietro Scheepers
+//11 November 2025
+
 using UnityEngine;
 
 [System.Serializable]
@@ -7,13 +11,9 @@ public class SiteData
     [TextArea(3, 6)]
     public string description;
 
-    // The exact name used in your AR Reference Image Library for this QR
+    
     public string qrCodeName;
-
-    // Optional: latitude/longitude if you want Map links
     public double latitude;
     public double longitude;
-
-    // Optional thumbnail to show in popup
     public Sprite thumbnail;
 }

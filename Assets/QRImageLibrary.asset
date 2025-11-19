@@ -47,3 +47,53 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: SoundQR
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4703057256959773263
+      m_GuidHigh: 9053592867123273347
+    m_SerializedTextureGuid:
+      m_GuidLow: 12787029565019268084
+      m_GuidHigh: 8860209642243570313
+    m_Size: {x: 0.14600694, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: shackQR
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5162183343116636154
+      m_GuidHigh: 9521056803776757377
+    m_SerializedTextureGuid:
+      m_GuidLow: 11255756318287964573
+      m_GuidHigh: 14279828985760464841
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: ferQR
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4854161313302656323
+      m_GuidHigh: 18178076122368554403
+    m_SerializedTextureGuid:
+      m_GuidLow: 14966794329353656259
+      m_GuidHigh: 15351926212984734072
+    m_Size: {x: 0.1, y: 0.15009381}
+    m_SpecifySize: 1
+    m_Name: ladyBirdQR
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4939404562879890112
+      m_GuidHigh: 12525712733390321083
+    m_SerializedTextureGuid:
+      m_GuidLow: 5847030515438427202
+      m_GuidHigh: 2397740528576479208
+    m_Size: {x: 0.2, y: 0.2429752}
+    m_SpecifySize: 1
+    m_Name: proteaQR
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4680905361763747135
+      m_GuidHigh: 8739799262424759960
+    m_SerializedTextureGuid:
+      m_GuidLow: 4527310010883237056
+      m_GuidHigh: 15327504070205456648
+    m_Size: {x: 0.1, y: 0.14459834}
+    m_SpecifySize: 1
+    m_Name: coneBushQR
+    m_Texture: {fileID: 0}

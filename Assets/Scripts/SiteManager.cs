@@ -1,7 +1,10 @@
+//Hold information about the different sites, editable in the Inspector
+//Pietro Scheepers
+//11 November 2025
+
 using System.Collections.Generic;
 using UnityEngine;
 
-// Simple singleton to hold your sites list, editable in the Inspector
 public class SiteManager : MonoBehaviour
 {
     public static SiteManager Instance { get; private set; }
@@ -14,7 +17,7 @@ public class SiteManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // optional
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
