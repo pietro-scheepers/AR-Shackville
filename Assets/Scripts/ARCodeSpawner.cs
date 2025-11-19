@@ -1,17 +1,22 @@
+//Keeps track of the QR code/image that correlates to a specific object to be spawned
+//Pietro Scheepers
+//31 October 2025
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
+//Class corresponding to the spawned object
 [System.Serializable]
 public class QRPrefabMapping
 {
-    public string qrCodeName;      // Must match Reference Image Library
+    public string qrCodeName;     
     public GameObject prefab;
 
-    public Vector3 positionOffset; // Local offset from QR center
-    public Vector3 rotationOffset; // Euler angle offset
-    public float scale = 1f;       // Uniform scale
+    public Vector3 positionOffset; 
+    public Vector3 rotationOffset;
+    public float scale = 1f;       
 }
 
 [RequireComponent(typeof(ARTrackedImageManager))]
@@ -61,7 +66,7 @@ public class ARCodeSpawner : MonoBehaviour
                 currentSpawnedObject.SetActive(false);
         }
 
-        // QR removed from view
+        // QR removed from view -- keep object still spawned
         foreach (var removed in args.removed)
         {
             if (currentSpawnedObject != null)
@@ -85,9 +90,7 @@ public class ARCodeSpawner : MonoBehaviour
         currentSpawnedObject.SetActive(distance <= hideDistance);
     }
 
-    // -----------------------------------------------------
-    // Spawn a NEW object (destroy previous one)
-    // -----------------------------------------------------
+    //Spawn a new object in the scene
     void SpawnFresh(ARTrackedImage trackedImage)
     {
         if (currentSpawnedObject != null)
@@ -97,9 +100,7 @@ public class ARCodeSpawner : MonoBehaviour
         currentImageTransform = trackedImage.transform;
     }
 
-    // -----------------------------------------------------
-    // Update position + rotation of existing object
-    // -----------------------------------------------------
+    //If the code is repositioned, then update the object position etc
     void UpdateExisting(ARTrackedImage trackedImage)
     {
         if (currentSpawnedObject == null)
@@ -132,9 +133,7 @@ public class ARCodeSpawner : MonoBehaviour
         currentImageTransform = trackedImage.transform;
     }
 
-    // -----------------------------------------------------
-    // Instantiate object with offset + scale
-    // -----------------------------------------------------
+    //Create object with the predefined position, scale and rotation
     GameObject CreateSpawnedObject(ARTrackedImage trackedImage)
     {
         var mapping = GetMapping(trackedImage.referenceImage.name);
@@ -166,9 +165,7 @@ public class ARCodeSpawner : MonoBehaviour
         return obj;
     }
 
-    // -----------------------------------------------------
-    // Lookup mapping
-    // -----------------------------------------------------
+    //Get the correct mapping for the scaned image
     QRPrefabMapping GetMapping(string qrName)
     {
         foreach (var m in mappings)

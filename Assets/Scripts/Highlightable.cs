@@ -1,3 +1,8 @@
+//NOT USED
+//Highlights a selected item
+//Pietro Scheepers
+//19 November 2025
+
 using UnityEngine;
 
 public class Highlightable : MonoBehaviour

@@ -4759,7 +4759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRPrefabMapping__ctor_m348C41F8B2192055E9A88373B61D397CA54AD1C6 (QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:14>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:19>
 		__this->___scale = (1.0f);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -4777,7 +4777,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRPrefabMapping__ctor_m348C41F8B2192055E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ARCodeSpawner_get_latestSpawnedModel_mCB04F57F8407C8A35AF0831883D22C0DB9AE13FF (ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:32>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:37>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___U3ClatestSpawnedModelU3Ek__BackingField;
 		return L_0;
 	}
@@ -4786,7 +4786,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_set_latestSpawnedModel_m41CC1EE9EE0046E3D8D88D20AC4E74D68698B1DE (ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:32>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:37>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = ___0_value;
 		__this->___U3ClatestSpawnedModelU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3ClatestSpawnedModelU3Ek__BackingField), (void*)L_0);
@@ -4803,12 +4803,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_Awake_m9E50F3984FA215D8A09
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:36>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:41>
 		ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4* L_0;
 		L_0 = Component_GetComponent_TisARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4_m3C5338CF883CA97951B07D446FEA5FC76D1FB683(__this, Component_GetComponent_TisARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4_m3C5338CF883CA97951B07D446FEA5FC76D1FB683_RuntimeMethod_var);
 		__this->___trackedImageManager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___trackedImageManager), (void*)L_0);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:37>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:42>
 		return;
 	}
 }
@@ -4823,13 +4823,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_OnEnable_m810416D944CD2825
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:41>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:46>
 		ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4* L_0 = __this->___trackedImageManager;
 		Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F* L_1 = (Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F*)il2cpp_codegen_object_new(Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F_il2cpp_TypeInfo_var);
 		Action_1__ctor_m55BF5EC44D8DEC74D367B749B5B29C8F2A9CB957(L_1, __this, (intptr_t)((void*)ARCodeSpawner_OnTrackedImagesChanged_m07B661B34A2A18ABBB99188FB8DEC197C6F62606_RuntimeMethod_var), NULL);
 		NullCheck(L_0);
 		ARTrackedImageManager_add_trackedImagesChanged_mB190015342B225144729100E0E38745CAFA7F438(L_0, L_1, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:42>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:47>
 		return;
 	}
 }
@@ -4844,13 +4844,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_OnDisable_m5021A13209AE02E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:46>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:51>
 		ARTrackedImageManager_tCBA77F0B8A7172CC6508CA29176EAE1DE5DC4BD4* L_0 = __this->___trackedImageManager;
 		Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F* L_1 = (Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F*)il2cpp_codegen_object_new(Action_1_tE7B3D1070B99EFDFA92BD4DBEF95BF881DEB591F_il2cpp_TypeInfo_var);
 		Action_1__ctor_m55BF5EC44D8DEC74D367B749B5B29C8F2A9CB957(L_1, __this, (intptr_t)((void*)ARCodeSpawner_OnTrackedImagesChanged_m07B661B34A2A18ABBB99188FB8DEC197C6F62606_RuntimeMethod_var), NULL);
 		NullCheck(L_0);
 		ARTrackedImageManager_remove_trackedImagesChanged_mA754FAB732F3D5D803FA3A58A51E6487E75CCF34(L_0, L_1, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:47>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:52>
 		return;
 	}
 }
@@ -4872,7 +4872,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_OnTrackedImagesChanged_m07
 	ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* V_1 = NULL;
 	ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* V_2 = NULL;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:52>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:57>
 		List_1_tFA730335FF46512E4245B2F46892CA318B394FAE* L_0;
 		L_0 = ARTrackedImagesChangedEventArgs_get_added_m2929CC85141D13AF05C1484AFB47E043C6D3EE35_inline((&___0_args), NULL);
 		NullCheck(L_0);
@@ -4898,18 +4898,18 @@ FINALLY_0029:
 
 IL_000f_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:52>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:57>
 				ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_2;
 				L_2 = Enumerator_get_Current_m8CC28190A4AC93DDE1B4FBD06D314A89D89291E9_inline((&V_0), Enumerator_get_Current_m8CC28190A4AC93DDE1B4FBD06D314A89D89291E9_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:53>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:58>
 				ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_3 = V_1;
 				ARCodeSpawner_SpawnFresh_m63282E34B9CCF36CD1D312FC9F754A1FCDEF7C5A(__this, L_3, NULL);
 			}
 
 IL_001e_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:52>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:57>
 				bool L_4;
 				L_4 = Enumerator_MoveNext_mC8FCE26C6AC5FEC78CEAE18F477FCE8FCFAC8E80((&V_0), Enumerator_MoveNext_mC8FCE26C6AC5FEC78CEAE18F477FCE8FCFAC8E80_RuntimeMethod_var);
 				if (L_4)
@@ -4929,7 +4929,7 @@ IL_001e_1:
 
 IL_0037:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:56>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:61>
 		List_1_tFA730335FF46512E4245B2F46892CA318B394FAE* L_5;
 		L_5 = ARTrackedImagesChangedEventArgs_get_updated_m0C896E1C21EF35FF4B31B36563838EC2BA3CDFD1_inline((&___0_args), NULL);
 		NullCheck(L_5);
@@ -4955,11 +4955,11 @@ FINALLY_0085:
 
 IL_0046_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:56>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:61>
 				ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_7;
 				L_7 = Enumerator_get_Current_m8CC28190A4AC93DDE1B4FBD06D314A89D89291E9_inline((&V_0), Enumerator_get_Current_m8CC28190A4AC93DDE1B4FBD06D314A89D89291E9_RuntimeMethod_var);
 				V_2 = L_7;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:58>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:63>
 				ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_8 = V_2;
 				NullCheck(L_8);
 				int32_t L_9;
@@ -4970,7 +4970,7 @@ IL_0046_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:59>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:64>
 				ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_10 = V_2;
 				ARCodeSpawner_UpdateExisting_mC890AF913F64390E8E140875347CF91033020442(__this, L_10, NULL);
 				goto IL_007a_1;
@@ -4978,7 +4978,7 @@ IL_0046_1:
 
 IL_0060_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:60>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:65>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___currentSpawnedObject;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_12;
@@ -4989,7 +4989,7 @@ IL_0060_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:61>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:66>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = __this->___currentSpawnedObject;
 				NullCheck(L_13);
 				GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_13, (bool)0, NULL);
@@ -4997,7 +4997,7 @@ IL_0060_1:
 
 IL_007a_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:56>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:61>
 				bool L_14;
 				L_14 = Enumerator_MoveNext_mC8FCE26C6AC5FEC78CEAE18F477FCE8FCFAC8E80((&V_0), Enumerator_MoveNext_mC8FCE26C6AC5FEC78CEAE18F477FCE8FCFAC8E80_RuntimeMethod_var);
 				if (L_14)
@@ -5017,7 +5017,7 @@ IL_007a_1:
 
 IL_0093:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:65>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:70>
 		List_1_tFA730335FF46512E4245B2F46892CA318B394FAE* L_15;
 		L_15 = ARTrackedImagesChangedEventArgs_get_removed_m062CBBEF163BEE47A673F7B3BDC0DD1C6EAEA185_inline((&___0_args), NULL);
 		NullCheck(L_15);
@@ -5043,10 +5043,10 @@ FINALLY_00dc:
 
 IL_00a2_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:65>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:70>
 				ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_17;
 				L_17 = Enumerator_get_Current_m8CC28190A4AC93DDE1B4FBD06D314A89D89291E9_inline((&V_0), Enumerator_get_Current_m8CC28190A4AC93DDE1B4FBD06D314A89D89291E9_RuntimeMethod_var);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:67>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:72>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = __this->___currentSpawnedObject;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_19;
@@ -5057,25 +5057,25 @@ IL_00a2_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:69>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:74>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20 = __this->___currentSpawnedObject;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_20, NULL);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:70>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:75>
 				__this->___currentSpawnedObject = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___currentSpawnedObject), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
 			}
 
 IL_00ca_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:72>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:77>
 				__this->___currentImageTransform = (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___currentImageTransform), (void*)(Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL);
 			}
 
 IL_00d1_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:65>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:70>
 				bool L_21;
 				L_21 = Enumerator_MoveNext_mC8FCE26C6AC5FEC78CEAE18F477FCE8FCFAC8E80((&V_0), Enumerator_MoveNext_mC8FCE26C6AC5FEC78CEAE18F477FCE8FCFAC8E80_RuntimeMethod_var);
 				if (L_21)
@@ -5095,7 +5095,7 @@ IL_00d1_1:
 
 IL_00ea:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:74>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:79>
 		return;
 	}
 }
@@ -5110,7 +5110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_Update_mB31BAB18C996D836AB
 	}
 	float V_0 = 0.0f;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:78>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:83>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___currentSpawnedObject;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5133,15 +5133,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_Update_mB31BAB18C996D836AB
 
 IL_001c:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:79>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:84>
 		return;
 	}
 
 IL_001d:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:81>
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:82>
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:83>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:86>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:87>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:88>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_4;
 		L_4 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
 		NullCheck(L_4);
@@ -5157,13 +5157,13 @@ IL_001d:
 		float L_9;
 		L_9 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_6, L_8, NULL);
 		V_0 = L_9;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:85>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:90>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___currentSpawnedObject;
 		float L_11 = V_0;
 		float L_12 = __this->___hideDistance;
 		NullCheck(L_10);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, (bool)((((int32_t)((!(((float)L_11) <= ((float)L_12)))? 1 : 0)) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:86>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:91>
 		return;
 	}
 }
@@ -5177,7 +5177,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_SpawnFresh_m63282E34B9CCF3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:93>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:96>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___currentSpawnedObject;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5188,7 +5188,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_SpawnFresh_m63282E34B9CCF3
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:94>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:97>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___currentSpawnedObject;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_2, NULL);
@@ -5196,20 +5196,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_SpawnFresh_m63282E34B9CCF3
 
 IL_0019:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:96>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:99>
 		ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_3 = ___0_trackedImage;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
 		L_4 = ARCodeSpawner_CreateSpawnedObject_m605DC9C0BAC536D54ABA572FE8962600A64ADE5C(__this, L_3, NULL);
 		__this->___currentSpawnedObject = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentSpawnedObject), (void*)L_4);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:97>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:100>
 		ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_5 = ___0_trackedImage;
 		NullCheck(L_5);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
 		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_5, NULL);
 		__this->___currentImageTransform = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentImageTransform), (void*)L_6);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:98>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:101>
 		return;
 	}
 }
@@ -5230,7 +5230,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_UpdateExisting_mC890AF913F
 	XRReferenceImage_tB2544D6E18E55CD44F4EED1B0573A6A7154C1E2F V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:105>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:106>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___currentSpawnedObject;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5241,16 +5241,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner_UpdateExisting_mC890AF913F
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:107>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:108>
 		ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_2 = ___0_trackedImage;
 		ARCodeSpawner_SpawnFresh_m63282E34B9CCF36CD1D312FC9F754A1FCDEF7C5A(__this, L_2, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:108>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:109>
 		return;
 	}
 
 IL_0016:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:111>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:112>
 		ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_3 = ___0_trackedImage;
 		NullCheck(L_3);
 		XRReferenceImage_tB2544D6E18E55CD44F4EED1B0573A6A7154C1E2F L_4;
@@ -5261,7 +5261,7 @@ IL_0016:
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_6;
 		L_6 = ARCodeSpawner_GetMapping_m00E25C62DCA5D3A0C45CA2F53ADC841061D708DD(__this, L_5, NULL);
 		V_0 = L_6;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:113>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:114>
 		ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_7 = ___0_trackedImage;
 		NullCheck(L_7);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
@@ -5270,7 +5270,7 @@ IL_0016:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
 		L_9 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_8, NULL);
 		V_1 = L_9;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:114>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:115>
 		ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_10 = ___0_trackedImage;
 		NullCheck(L_10);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11;
@@ -5279,7 +5279,7 @@ IL_0016:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_12;
 		L_12 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_11, NULL);
 		V_2 = L_12;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:116>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:117>
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_13 = V_0;
 		if (!L_13)
 		{
@@ -5287,7 +5287,7 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:118>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:119>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14 = V_2;
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_15 = V_0;
 		NullCheck(L_15);
@@ -5297,7 +5297,7 @@ IL_0016:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_18;
 		L_18 = Quaternion_op_Multiply_mCB375FCCC12A2EC8F9EB824A1BFB4453B58C2012_inline(L_14, L_17, NULL);
 		V_2 = L_18;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:119>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:120>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = V_1;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_20 = V_2;
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_21 = V_0;
@@ -5312,7 +5312,7 @@ IL_0016:
 
 IL_006b:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:122>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:123>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = __this->___currentSpawnedObject;
 		NullCheck(L_25);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26;
@@ -5320,7 +5320,7 @@ IL_006b:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27 = V_1;
 		NullCheck(L_26);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_26, L_27, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:123>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:124>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28 = __this->___currentSpawnedObject;
 		NullCheck(L_28);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_29;
@@ -5328,17 +5328,17 @@ IL_006b:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_30 = V_2;
 		NullCheck(L_29);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_29, L_30, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:125>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:126>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_31 = __this->___currentSpawnedObject;
 		NullCheck(L_31);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_31, (bool)1, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:127>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:128>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = __this->___currentSpawnedObject;
 		NullCheck(L_32);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33;
 		L_33 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_32, NULL);
 		ARCodeSpawner_set_latestSpawnedModel_m41CC1EE9EE0046E3D8D88D20AC4E74D68698B1DE_inline(__this, L_33, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:129>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:130>
 		ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* L_34 = __this->___scaleController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_35;
@@ -5349,7 +5349,7 @@ IL_006b:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:130>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:131>
 		ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* L_36 = __this->___scaleController;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_37;
 		L_37 = ARCodeSpawner_get_latestSpawnedModel_mCB04F57F8407C8A35AF0831883D22C0DB9AE13FF_inline(__this, NULL);
@@ -5360,14 +5360,14 @@ IL_006b:
 
 IL_00c9:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:132>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:133>
 		ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_38 = ___0_trackedImage;
 		NullCheck(L_38);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_39;
 		L_39 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_38, NULL);
 		__this->___currentImageTransform = L_39;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentImageTransform), (void*)L_39);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:133>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:134>
 		return;
 	}
 }
@@ -5394,7 +5394,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B5_0 = NULL;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B4_0 = NULL;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:140>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:139>
 		ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_0 = ___0_trackedImage;
 		NullCheck(L_0);
 		XRReferenceImage_tB2544D6E18E55CD44F4EED1B0573A6A7154C1E2F L_1;
@@ -5405,7 +5405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_3;
 		L_3 = ARCodeSpawner_GetMapping_m00E25C62DCA5D3A0C45CA2F53ADC841061D708DD(__this, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:142>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:141>
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_4 = V_0;
 		if (L_4)
 		{
@@ -5443,7 +5443,7 @@ IL_0022:
 IL_002c:
 	{
 		V_1 = G_B5_0;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:143>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:142>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -5454,13 +5454,13 @@ IL_002c:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:143>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:142>
 		return (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 	}
 
 IL_0038:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:145>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:144>
 		ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_11 = ___0_trackedImage;
 		NullCheck(L_11);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12;
@@ -5469,7 +5469,7 @@ IL_0038:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
 		L_13 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_12, NULL);
 		V_2 = L_13;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:146>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:145>
 		ARTrackedImage_tC1D6394277D354FB2B952C6D5CAB62140AA455C2* L_14 = ___0_trackedImage;
 		NullCheck(L_14);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
@@ -5478,7 +5478,7 @@ IL_0038:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_16;
 		L_16 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_15, NULL);
 		V_3 = L_16;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:148>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:147>
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_17 = V_0;
 		if (!L_17)
 		{
@@ -5486,7 +5486,7 @@ IL_0038:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:150>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:149>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_18 = V_3;
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_19 = V_0;
 		NullCheck(L_19);
@@ -5496,7 +5496,7 @@ IL_0038:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_22;
 		L_22 = Quaternion_op_Multiply_mCB375FCCC12A2EC8F9EB824A1BFB4453B58C2012_inline(L_18, L_21, NULL);
 		V_3 = L_22;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:151>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:150>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = V_2;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_24 = V_3;
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_25 = V_0;
@@ -5511,7 +5511,7 @@ IL_0038:
 
 IL_0078:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:154>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:153>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_29 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30 = V_2;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_31 = V_3;
@@ -5519,7 +5519,7 @@ IL_0078:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32;
 		L_32 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4(L_29, L_30, L_31, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var);
 		V_4 = L_32;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:156>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:155>
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_33 = V_0;
 		if (!L_33)
 		{
@@ -5527,7 +5527,7 @@ IL_0078:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:157>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:156>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34 = V_4;
 		NullCheck(L_34);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_35;
@@ -5545,7 +5545,7 @@ IL_0078:
 
 IL_00a1:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:159>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:158>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_40 = V_4;
 		NullCheck(L_40);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_41;
@@ -5556,13 +5556,13 @@ IL_00a1:
 		L_43 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_42, NULL);
 		NullCheck(L_41);
 		Transform_SetParent_m9BDD7B7476714B2D7919B10BDC22CE75C0A0A195(L_41, L_43, (bool)1, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:161>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:160>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_44 = V_4;
 		NullCheck(L_44);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_45;
 		L_45 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_44, NULL);
 		ARCodeSpawner_set_latestSpawnedModel_m41CC1EE9EE0046E3D8D88D20AC4E74D68698B1DE_inline(__this, L_45, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:163>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:162>
 		ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* L_46 = __this->___scaleController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_47;
@@ -5573,7 +5573,7 @@ IL_00a1:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:164>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:163>
 		ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* L_48 = __this->___scaleController;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_49;
 		L_49 = ARCodeSpawner_get_latestSpawnedModel_mCB04F57F8407C8A35AF0831883D22C0DB9AE13FF_inline(__this, NULL);
@@ -5584,7 +5584,7 @@ IL_00a1:
 
 IL_00e0:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:166>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:165>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_50 = V_4;
 		return L_50;
 	}
@@ -5606,7 +5606,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F3
 	QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* V_1 = NULL;
 	QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* V_2 = NULL;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:174>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:171>
 		List_1_t5ED582125B73292762393CBDA10325CAC120CB32* L_0 = __this->___mappings;
 		NullCheck(L_0);
 		Enumerator_t2F169D4E85666FA6062D350BF0C1B1D7EC643799 L_1;
@@ -5631,11 +5631,11 @@ FINALLY_0033:
 
 IL_000e_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:174>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:171>
 				QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_2;
 				L_2 = Enumerator_get_Current_m6AB6F58155F1B192C8458A9C9E5AB5409F111376_inline((&V_0), Enumerator_get_Current_m6AB6F58155F1B192C8458A9C9E5AB5409F111376_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:176>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:173>
 				QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_3 = V_1;
 				NullCheck(L_3);
 				String_t* L_4 = L_3->___qrCodeName;
@@ -5648,7 +5648,7 @@ IL_000e_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:177>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:174>
 				QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_7 = V_1;
 				V_2 = L_7;
 				goto IL_0043;
@@ -5656,7 +5656,7 @@ IL_000e_1:
 
 IL_0028_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:174>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:171>
 				bool L_8;
 				L_8 = Enumerator_MoveNext_m823BC4BA0138444B271CC2F093D11D71AA46D09F((&V_0), Enumerator_MoveNext_m823BC4BA0138444B271CC2F093D11D71AA46D09F_RuntimeMethod_var);
 				if (L_8)
@@ -5676,13 +5676,13 @@ IL_0028_1:
 
 IL_0041:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:179>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:176>
 		return (QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C*)NULL;
 	}
 
 IL_0043:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:180>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:177>
 		QRPrefabMapping_tDE9699A16A4F1DCD0A2FDEA178F33E2464D4362C* L_9 = V_2;
 		return L_9;
 	}
@@ -5691,7 +5691,7 @@ IL_0043:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARCodeSpawner__ctor_m59B6DAEF36CA4F0375D3CC27AC74DC97A8B501D1 (ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:25>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:30>
 		__this->___hideDistance = (1.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -5718,18 +5718,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Highlightable_Awake_m3785FE731295006CF05
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:11>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:16>
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_0;
 		L_0 = Shader_Find_m183AA54F78320212DDEC811592F98456898A41C5(_stringLiteral9B4FEEFA76B93D58B6E47CD9FF76F6E287D0D321, NULL);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_1 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)il2cpp_codegen_object_new(Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_il2cpp_TypeInfo_var);
 		Material__ctor_m7FDF47105D66D19591BE505A0C42B0F90D88C9BF(L_1, L_0, NULL);
 		__this->___outlineMat = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___outlineMat), (void*)L_1);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:12>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:17>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_2 = __this->___outlineMat;
 		NullCheck(L_2);
 		Material_EnableKeyword_mE8523EF6CF694284DF976D47ADEDE9363A1174AC(L_2, _stringLiteral72D498F039FD562896966E064E8315EA0BCE68C5, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:13>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:18>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_3 = __this->___outlineMat;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4;
 		L_4 = Color_get_yellow_m66637FA14383E8D74F24AE256B577CE1D55D469F_inline(NULL);
@@ -5737,7 +5737,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Highlightable_Awake_m3785FE731295006CF05
 		L_5 = Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline(L_4, (1.5f), NULL);
 		NullCheck(L_3);
 		Material_SetColor_mFAB32FAA44461E46FD707B34184EC080CBB3539F(L_3, _stringLiteralB92EF51E45166C91E2762DB6C9F27C8BD6EBE466, L_5, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:14>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:19>
 		return;
 	}
 }
@@ -5756,10 +5756,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Highlightable_ApplyHighlight_m9CC1F8E449
 	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* V_2 = NULL;
 	MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* V_3 = NULL;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:18>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:23>
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_0;
 		L_0 = Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m35AC34F858BD2F34770712CD020AA0518D9409C7(__this, Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m35AC34F858BD2F34770712CD020AA0518D9409C7_RuntimeMethod_var);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:20>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:25>
 		V_0 = L_0;
 		V_1 = 0;
 		goto IL_0050;
@@ -5767,31 +5767,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Highlightable_ApplyHighlight_m9CC1F8E449
 
 IL_000b:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:20>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:25>
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_1 = V_0;
 		int32_t L_2 = V_1;
 		NullCheck(L_1);
 		int32_t L_3 = L_2;
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
 		V_2 = L_4;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:22>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:27>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_5 = V_2;
 		NullCheck(L_5);
 		MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* L_6;
 		L_6 = Renderer_get_materials_m43D33328432700524EAEAB093C67AE5689976118(L_5, NULL);
 		__this->___originalMats = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___originalMats), (void*)L_6);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:24>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:29>
 		MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* L_7 = __this->___originalMats;
 		NullCheck(L_7);
 		MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* L_8 = (MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D*)(MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D*)SZArrayNew(MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D_il2cpp_TypeInfo_var, (uint32_t)((int32_t)il2cpp_codegen_add(((int32_t)(((RuntimeArray*)L_7)->max_length)), 1)));
 		V_3 = L_8;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:25>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:30>
 		MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* L_9 = __this->___originalMats;
 		MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* L_10 = V_3;
 		NullCheck((RuntimeArray*)L_9);
 		Array_CopyTo_mFD42E3443AB3B850ED6F19359698E242A08E1BAB((RuntimeArray*)L_9, (RuntimeArray*)L_10, 0, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:26>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:31>
 		MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* L_11 = V_3;
 		MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* L_12 = V_3;
 		NullCheck(L_12);
@@ -5799,7 +5799,7 @@ IL_000b:
 		NullCheck(L_11);
 		ArrayElementTypeCheck (L_11, L_13);
 		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_12)->max_length)), 1))), (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)L_13);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:28>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:33>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_14 = V_2;
 		MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* L_15 = V_3;
 		NullCheck(L_14);
@@ -5810,7 +5810,7 @@ IL_000b:
 
 IL_0050:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:20>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:25>
 		int32_t L_17 = V_1;
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_18 = V_0;
 		NullCheck(L_18);
@@ -5820,7 +5820,7 @@ IL_0050:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:30>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:35>
 		return;
 	}
 }
@@ -5837,10 +5837,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Highlightable_RemoveHighlight_m9DC284CCC
 	int32_t V_1 = 0;
 	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* V_2 = NULL;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:34>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:39>
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_0;
 		L_0 = Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m35AC34F858BD2F34770712CD020AA0518D9409C7(__this, Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m35AC34F858BD2F34770712CD020AA0518D9409C7_RuntimeMethod_var);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:36>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:41>
 		V_0 = L_0;
 		V_1 = 0;
 		goto IL_0027;
@@ -5848,14 +5848,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Highlightable_RemoveHighlight_m9DC284CCC
 
 IL_000b:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:36>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:41>
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_1 = V_0;
 		int32_t L_2 = V_1;
 		NullCheck(L_1);
 		int32_t L_3 = L_2;
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
 		V_2 = L_4;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:38>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:43>
 		MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* L_5 = __this->___originalMats;
 		if (!L_5)
 		{
@@ -5863,7 +5863,7 @@ IL_000b:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:40>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:45>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_6 = V_2;
 		MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D* L_7 = __this->___originalMats;
 		NullCheck(L_6);
@@ -5878,7 +5878,7 @@ IL_0023:
 
 IL_0027:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:36>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:41>
 		int32_t L_9 = V_1;
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_10 = V_0;
 		NullCheck(L_10);
@@ -5888,7 +5888,7 @@ IL_0027:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:43>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/Highlightable.cs:48>
 		return;
 	}
 }
@@ -5920,7 +5920,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InfoPopupController_Awake_mE2AFC799C56AF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:16>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:20>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___infoPopup;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5931,7 +5931,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InfoPopupController_Awake_mE2AFC799C56AF
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:17>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:21>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___infoPopup;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
@@ -5939,7 +5939,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InfoPopupController_Awake_mE2AFC799C56AF
 
 IL_001a:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:19>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:23>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->___closeButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -5950,7 +5950,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:20>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:24>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_5 = __this->___closeButton;
 		NullCheck(L_5);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_6;
@@ -5963,7 +5963,7 @@ IL_001a:
 
 IL_0044:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:21>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:25>
 		return;
 	}
 }
@@ -5982,7 +5982,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InfoPopupController_ShowInfo_m85A2A59E4E
 	String_t* G_B4_0 = NULL;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* G_B4_1 = NULL;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:26>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:30>
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_0 = ___0_site;
 		if (!L_0)
 		{
@@ -6002,20 +6002,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InfoPopupController_ShowInfo_m85A2A59E4E
 
 IL_0011:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:26>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:30>
 		return;
 	}
 
 IL_0012:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:28>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:32>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_3 = __this->___titleText;
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_4 = ___0_site;
 		NullCheck(L_4);
 		String_t* L_5 = L_4->___siteName;
 		NullCheck(L_3);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_3, L_5);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:29>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:33>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_6 = __this->___descriptionText;
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_7 = ___0_site;
 		NullCheck(L_7);
@@ -6039,7 +6039,7 @@ IL_0038:
 	{
 		NullCheck(G_B5_1);
 		VirtualActionInvoker1< String_t* >::Invoke(66, G_B5_1, G_B5_0);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:31>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:35>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_10 = __this->___thumbnailImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
@@ -6050,7 +6050,7 @@ IL_0038:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:33>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:37>
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_12 = ___0_site;
 		NullCheck(L_12);
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_13 = L_12->___thumbnail;
@@ -6063,14 +6063,14 @@ IL_0038:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:35>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:39>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_15 = __this->___thumbnailImage;
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_16 = ___0_site;
 		NullCheck(L_16);
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_17 = L_16->___thumbnail;
 		NullCheck(L_15);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_15, L_17, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:36>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:40>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_18 = __this->___thumbnailImage;
 		NullCheck(L_18);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19;
@@ -6082,7 +6082,7 @@ IL_0038:
 
 IL_007d:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:40>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:44>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_20 = __this->___thumbnailImage;
 		NullCheck(L_20);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21;
@@ -6093,11 +6093,11 @@ IL_007d:
 
 IL_008e:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:44>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:48>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = __this->___infoPopup;
 		NullCheck(L_22);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_22, (bool)1, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:45>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:49>
 		return;
 	}
 }
@@ -6111,7 +6111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InfoPopupController_ShowInfo_m3E7CD375EF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:50>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:53>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___infoPopup;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6122,23 +6122,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InfoPopupController_ShowInfo_m3E7CD375EF
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:50>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:53>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:51>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:54>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_2 = __this->___titleText;
 		String_t* L_3 = ___0_title;
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_2, L_3);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:52>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:55>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_4 = __this->___descriptionText;
 		String_t* L_5 = ___1_description;
 		NullCheck(L_4);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_4, L_5);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:53>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:56>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_6 = __this->___thumbnailImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -6149,7 +6149,7 @@ IL_000f:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:53>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:56>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_8 = __this->___thumbnailImage;
 		NullCheck(L_8);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9;
@@ -6160,11 +6160,11 @@ IL_000f:
 
 IL_0046:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:54>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:57>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___infoPopup;
 		NullCheck(L_10);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, (bool)1, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:55>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:58>
 		return;
 	}
 }
@@ -6178,7 +6178,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InfoPopupController_HideInfo_mAEE1B5EFFD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:59>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:62>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___infoPopup;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6189,17 +6189,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InfoPopupController_HideInfo_mAEE1B5EFFD
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:59>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:62>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:60>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:63>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___infoPopup;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:61>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/InfoPopupController.cs:64>
 		return;
 	}
 }
@@ -6223,9 +6223,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InfoPopupController__ctor_m4875BFE113294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuController_Start_m88A8FAF8DB4765830F6CA0D4508D5E565B2F68D0 (MenuController_t17F68C6A3294916109B163214554B7F97C7E8427* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:18>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:22>
 		MenuController_PopulateList_mEFD0148B1A2698C1626C5ACC10F8A744CEC77EF5(__this, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:19>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:23>
 		return;
 	}
 }
@@ -6296,7 +6296,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuController_PopulateList_mEFD0148B1A2
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* G_B31_0 = NULL;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* G_B33_0 = NULL;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:23>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:27>
 		SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4* L_0;
 		L_0 = SiteManager_get_Instance_m9E2FAA6C5551318194964A7452E2BEBCB55058E5_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -6330,13 +6330,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuController_PopulateList_mEFD0148B1A2
 
 IL_0029:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:23>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:27>
 		return;
 	}
 
 IL_002a:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:26>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:29>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___contentParent;
 		NullCheck(L_6);
 		RuntimeObject* L_7;
@@ -6378,12 +6378,12 @@ IL_0067:
 
 IL_0038_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:26>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:29>
 				RuntimeObject* L_11 = V_0;
 				NullCheck(L_11);
 				RuntimeObject* L_12;
 				L_12 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_11);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:26>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:29>
 				NullCheck(((Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)CastclassClass((RuntimeObject*)L_12, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var)));
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13;
 				L_13 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(((Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)CastclassClass((RuntimeObject*)L_12, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var)), NULL);
@@ -6393,7 +6393,7 @@ IL_0038_1:
 
 IL_004d_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:26>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:29>
 				RuntimeObject* L_14 = V_0;
 				NullCheck(L_14);
 				bool L_15;
@@ -6415,7 +6415,7 @@ IL_004d_1:
 
 IL_0068:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:28>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:31>
 		SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4* L_16;
 		L_16 = SiteManager_get_Instance_m9E2FAA6C5551318194964A7452E2BEBCB55058E5_inline(NULL);
 		NullCheck(L_16);
@@ -6450,30 +6450,30 @@ IL_007d_1:
 				NullCheck(L_20);
 				L_20->___U3CU3E4__this = __this;
 				Il2CppCodeGenWriteBarrier((void**)(&L_20->___U3CU3E4__this), (void*)__this);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:28>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:31>
 				U3CU3Ec__DisplayClass4_0_t92879EA67263C6F39CAADE8B172D7FB95341F17F* L_21 = V_3;
 				SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_22;
 				L_22 = Enumerator_get_Current_m004E3010A7E9E075BFBED136703C0B24B05420DA_inline((&V_2), Enumerator_get_Current_m004E3010A7E9E075BFBED136703C0B24B05420DA_RuntimeMethod_var);
 				NullCheck(L_21);
 				L_21->___site = L_22;
 				Il2CppCodeGenWriteBarrier((void**)(&L_21->___site), (void*)L_22);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:30>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:33>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23 = __this->___listItemPrefab;
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24 = __this->___contentParent;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25;
 				L_25 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811(L_23, L_24, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:31>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:34>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26 = L_25;
 				NullCheck(L_26);
 				GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_26, (bool)1, NULL);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:34>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:37>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = L_26;
 				NullCheck(L_27);
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_28;
 				L_28 = GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D(L_27, GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D_RuntimeMethod_var);
 				V_4 = L_28;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:35>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:38>
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_29 = V_4;
 				bool L_30;
 				L_30 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_29, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -6485,7 +6485,7 @@ IL_007d_1:
 				G_B15_0 = L_27;
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:36>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:39>
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_31 = V_4;
 				NullCheck(L_31);
 				Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_31, (bool)1, NULL);
@@ -6494,7 +6494,7 @@ IL_007d_1:
 
 IL_00c9_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:39>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:42>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = G_B16_0;
 				NullCheck(L_32);
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33;
@@ -6530,7 +6530,7 @@ IL_00e0_1:
 IL_00e5_1:
 			{
 				V_5 = G_B19_0;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:40>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:43>
 				TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_37 = V_5;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_38;
@@ -6543,11 +6543,11 @@ IL_00e5_1:
 				G_B20_0 = G_B19_1;
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:42>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:45>
 				TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_39 = V_5;
 				NullCheck(L_39);
 				Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_39, (bool)1, NULL);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:43>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:46>
 				TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_40 = V_5;
 				U3CU3Ec__DisplayClass4_0_t92879EA67263C6F39CAADE8B172D7FB95341F17F* L_41 = V_3;
 				NullCheck(L_41);
@@ -6561,7 +6561,7 @@ IL_00e5_1:
 
 IL_010b_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:47>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:50>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_44 = G_B21_0;
 				NullCheck(L_44);
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_45;
@@ -6597,7 +6597,7 @@ IL_0122_1:
 IL_0127_1:
 			{
 				V_6 = G_B24_0;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:48>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:51>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_49 = V_6;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_50;
@@ -6610,17 +6610,17 @@ IL_0127_1:
 				G_B25_0 = G_B24_1;
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:50>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:53>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_51 = V_6;
 				NullCheck(L_51);
 				Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_51, (bool)1, NULL);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:52>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:55>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_52 = V_6;
 				NullCheck(L_52);
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_53;
 				L_53 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_52, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 				V_8 = L_53;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:53>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:56>
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_54 = V_8;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_55;
@@ -6633,7 +6633,7 @@ IL_0127_1:
 				G_B26_0 = G_B25_0;
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:53>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:56>
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_56 = V_8;
 				NullCheck(L_56);
 				Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_56, (bool)1, NULL);
@@ -6642,13 +6642,13 @@ IL_0127_1:
 
 IL_0156_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:55>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:58>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_57 = V_6;
 				NullCheck(L_57);
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_58;
 				L_58 = Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB(L_57, Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB_RuntimeMethod_var);
 				V_9 = L_58;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:56>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:59>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_59 = V_9;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_60;
@@ -6661,7 +6661,7 @@ IL_0156_1:
 				G_B28_0 = G_B27_0;
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:56>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:59>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_61 = V_9;
 				NullCheck(L_61);
 				Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_61, (bool)1, NULL);
@@ -6670,18 +6670,18 @@ IL_0156_1:
 
 IL_0171_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:59>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:62>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_62 = V_6;
 				NullCheck(L_62);
 				ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_63;
 				L_63 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_62, NULL);
 				NullCheck(L_63);
 				UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_63, NULL);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:60>
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:61>
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:62>
 				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:63>
 				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:64>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:65>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:66>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:67>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_64 = V_6;
 				NullCheck(L_64);
 				ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_65;
@@ -6696,7 +6696,7 @@ IL_0171_1:
 
 IL_0195_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:68>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:71>
 				NullCheck(G_B30_0);
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_68;
 				L_68 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(G_B30_0, NULL);
@@ -6727,7 +6727,7 @@ IL_01ab_1:
 IL_01b0_1:
 			{
 				V_7 = G_B33_0;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:69>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:72>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_72 = V_7;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_73;
@@ -6738,17 +6738,17 @@ IL_01b0_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:71>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:74>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_74 = V_7;
 				NullCheck(L_74);
 				Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_74, (bool)1, NULL);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:73>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:76>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_75 = V_7;
 				NullCheck(L_75);
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_76;
 				L_76 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_75, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 				V_10 = L_76;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:74>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:77>
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_77 = V_10;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_78;
@@ -6759,7 +6759,7 @@ IL_01b0_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:74>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:77>
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_79 = V_10;
 				NullCheck(L_79);
 				Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_79, (bool)1, NULL);
@@ -6767,13 +6767,13 @@ IL_01b0_1:
 
 IL_01df_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:76>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:79>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_80 = V_7;
 				NullCheck(L_80);
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_81;
 				L_81 = Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB(L_80, Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB_RuntimeMethod_var);
 				V_11 = L_81;
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:77>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:80>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_82 = V_11;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_83;
@@ -6784,7 +6784,7 @@ IL_01df_1:
 				}
 			}
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:77>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:80>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_84 = V_11;
 				NullCheck(L_84);
 				Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_84, (bool)1, NULL);
@@ -6792,18 +6792,18 @@ IL_01df_1:
 
 IL_01fa_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:79>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:82>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_85 = V_7;
 				NullCheck(L_85);
 				ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_86;
 				L_86 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_85, NULL);
 				NullCheck(L_86);
 				UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_86, NULL);
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:80>
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:81>
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:82>
 				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:83>
 				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:84>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:85>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:86>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:87>
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_87 = V_7;
 				NullCheck(L_87);
 				ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_88;
@@ -6817,7 +6817,7 @@ IL_01fa_1:
 
 IL_021e_1:
 			{
-				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:28>
+				//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:31>
 				bool L_91;
 				L_91 = Enumerator_MoveNext_m49488AEE14EE5673C36040BDD1CEDC0C7EE1B94B((&V_2), Enumerator_MoveNext_m49488AEE14EE5673C36040BDD1CEDC0C7EE1B94B_RuntimeMethod_var);
 				if (L_91)
@@ -6837,7 +6837,7 @@ IL_021e_1:
 
 IL_023a:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:87>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:90>
 		return;
 	}
 }
@@ -6856,7 +6856,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuController_OpenMapsForSite_m94D0253F
 	String_t* V_0 = NULL;
 	String_t* V_1 = NULL;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:91>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:94>
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_0 = ___0_site;
 		if (L_0)
 		{
@@ -6864,13 +6864,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuController_OpenMapsForSite_m94D0253F
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:91>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:94>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:93>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:96>
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_1 = ___0_site;
 		NullCheck(L_1);
 		double* L_2 = (double*)(&L_1->___latitude);
@@ -6880,7 +6880,7 @@ IL_0004:
 		String_t* L_4;
 		L_4 = Double_ToString_m4318830D9F771852FDCF21C14CF9E8ABC7E77357(L_2, L_3, NULL);
 		V_0 = L_4;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:94>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:97>
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_5 = ___0_site;
 		NullCheck(L_5);
 		double* L_6 = (double*)(&L_5->___longitude);
@@ -6889,15 +6889,15 @@ IL_0004:
 		String_t* L_8;
 		L_8 = Double_ToString_m4318830D9F771852FDCF21C14CF9E8ABC7E77357(L_6, L_7, NULL);
 		V_1 = L_8;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:100>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:103>
 		String_t* L_9 = V_0;
 		String_t* L_10 = V_1;
 		String_t* L_11;
 		L_11 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteral895C80E21A282E4CA50BD36D3304276A08329B5D, L_9, _stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB, L_10, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:101>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:104>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		Application_OpenURL_mE748FA4D503715DEE12BCA4BDD8A5305AE41DB89(L_11, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:103>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:106>
 		return;
 	}
 }
@@ -6905,7 +6905,7 @@ IL_0004:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MenuController_UnityWebRequestEscape_m5338A0DC1C5E9FB90BE0813A5C8CEB84F2B7C56D (MenuController_t17F68C6A3294916109B163214554B7F97C7E8427* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:108>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:111>
 		String_t* L_0 = ___0_value;
 		String_t* L_1;
 		L_1 = UnityWebRequest_EscapeURL_m1B819655E6FFE468B9DE9D101A17398F3E1A4F27(L_0, NULL);
@@ -6920,7 +6920,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuController_ShowPopupForQRCode_mD688C
 	SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4* G_B1_0 = NULL;
 	SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* G_B3_0 = NULL;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:114>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:117>
 		SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4* L_0;
 		L_0 = SiteManager_get_Instance_m9E2FAA6C5551318194964A7452E2BEBCB55058E5_inline(NULL);
 		SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4* L_1 = L_0;
@@ -6948,7 +6948,7 @@ IL_000c:
 IL_0012:
 	{
 		V_0 = G_B3_0;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:115>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:118>
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_4 = V_0;
 		if (!L_4)
 		{
@@ -6956,7 +6956,7 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:116>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:119>
 		InfoPopupController_t4BDE33F8AA6EDB4DFC23CB36BDF93DD91BAA188B* L_5 = __this->___infoPopupController;
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_6 = V_0;
 		NullCheck(L_5);
@@ -6965,7 +6965,7 @@ IL_0012:
 
 IL_0022:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:117>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:120>
 		return;
 	}
 }
@@ -6973,11 +6973,11 @@ IL_0022:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuController_HidePopup_mB8276F55682D58630F185E07F479E0D239898051 (MenuController_t17F68C6A3294916109B163214554B7F97C7E8427* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:122>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:124>
 		InfoPopupController_t4BDE33F8AA6EDB4DFC23CB36BDF93DD91BAA188B* L_0 = __this->___infoPopupController;
 		NullCheck(L_0);
 		InfoPopupController_HideInfo_mAEE1B5EFFD2F29AD77DF8201B23ED78B33B65941(L_0, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:123>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:125>
 		return;
 	}
 }
@@ -7016,7 +7016,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0_U3CPopulateList
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:62>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:65>
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_0 = __this->___site;
 		NullCheck(L_0);
 		String_t* L_1 = L_0->___siteName;
@@ -7024,14 +7024,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0_U3CPopulateList
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral833458B4DBE8DC3C03AC28451E0F568631CD2446, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:63>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:66>
 		MenuController_t17F68C6A3294916109B163214554B7F97C7E8427* L_3 = __this->___U3CU3E4__this;
 		NullCheck(L_3);
 		InfoPopupController_t4BDE33F8AA6EDB4DFC23CB36BDF93DD91BAA188B* L_4 = L_3->___infoPopupController;
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_5 = __this->___site;
 		NullCheck(L_4);
 		InfoPopupController_ShowInfo_m85A2A59E4EC2962942B0CB7B8493FFC71750DB4F(L_4, L_5, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:64>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:67>
 		return;
 	}
 }
@@ -7046,7 +7046,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0_U3CPopulateList
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:82>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:85>
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_0 = __this->___site;
 		NullCheck(L_0);
 		String_t* L_1 = L_0->___siteName;
@@ -7054,12 +7054,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0_U3CPopulateList
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC44A8C266CA779A5E52400DC2830F0ED51199967, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:83>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:86>
 		MenuController_t17F68C6A3294916109B163214554B7F97C7E8427* L_3 = __this->___U3CU3E4__this;
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_4 = __this->___site;
 		NullCheck(L_3);
 		MenuController_OpenMapsForSite_m94D0253F76264C1EF98FD25980DD89361F80426C(L_3, L_4, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:84>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/MenuController.cs:87>
 		return;
 	}
 }
@@ -7081,7 +7081,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_Update_m6A844291B5AA03FE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:17>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:21>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___currentModel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7092,13 +7092,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_Update_m6A844291B5AA03FE
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:17>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:21>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:19>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:23>
 		bool L_2 = __this->___isIncreasing;
 		if (!L_2)
 		{
@@ -7106,13 +7106,13 @@ IL_000f:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:20>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:24>
 		ScaleController_ScaleUp_mF74F5799AA2250F111E120DDEA6AFEAF41C61541(__this, NULL);
 	}
 
 IL_001d:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:21>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:25>
 		bool L_3 = __this->___isDecreasing;
 		if (!L_3)
 		{
@@ -7120,13 +7120,13 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:22>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:26>
 		ScaleController_ScaleDown_mBFB1EB10035C11421F4667C20B69B59A3F3A927F(__this, NULL);
 	}
 
 IL_002b:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:23>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:27>
 		return;
 	}
 }
@@ -7134,7 +7134,7 @@ IL_002b:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_StartIncreasing_mBF483CC7C435918310F60304636C59D08C888E72 (ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:26>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:29>
 		__this->___isIncreasing = (bool)1;
 		return;
 	}
@@ -7143,7 +7143,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_StartIncreasing_mBF483CC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_StopIncreasing_m539E70FBE47B9A57DA93B3E25480FFF6CDDAF0C3 (ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:27>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:30>
 		__this->___isIncreasing = (bool)0;
 		return;
 	}
@@ -7152,7 +7152,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_StopIncreasing_m539E70FB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_StartDecreasing_m13D8CCE0B084C736A386058125E0358B71837536 (ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:29>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:32>
 		__this->___isDecreasing = (bool)1;
 		return;
 	}
@@ -7161,7 +7161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_StartDecreasing_m13D8CCE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_StopDecreasing_mA850A6F4EF24415119A17479A1596E1C6FFAA95C (ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:30>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:33>
 		__this->___isDecreasing = (bool)0;
 		return;
 	}
@@ -7170,7 +7170,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_StopDecreasing_mA850A6F4
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_ScaleUp_mF74F5799AA2250F111E120DDEA6AFEAF41C61541 (ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:35>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:37>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___currentModel;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = L_0;
 		NullCheck(L_1);
@@ -7185,9 +7185,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_ScaleUp_mF74F5799AA2250F
 		L_6 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_2, L_5, NULL);
 		NullCheck(L_1);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_1, L_6, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:36>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:38>
 		ScaleController_ClampScale_m3C95D0C0FE092F2BB749854BAF946F583404D6FE(__this, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:37>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:39>
 		return;
 	}
 }
@@ -7195,7 +7195,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_ScaleUp_mF74F5799AA2250F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_ScaleDown_mBFB1EB10035C11421F4667C20B69B59A3F3A927F (ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:41>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:43>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___currentModel;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = L_0;
 		NullCheck(L_1);
@@ -7210,9 +7210,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_ScaleDown_mBFB1EB10035C1
 		L_6 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_2, L_5, NULL);
 		NullCheck(L_1);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_1, L_6, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:42>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:44>
 		ScaleController_ClampScale_m3C95D0C0FE092F2BB749854BAF946F583404D6FE(__this, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:43>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:45>
 		return;
 	}
 }
@@ -7221,7 +7221,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_ClampScale_m3C95D0C0FE09
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:47>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:50>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___currentModel;
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
@@ -7232,7 +7232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_ClampScale_m3C95D0C0FE09
 		float L_5;
 		L_5 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(L_2, L_3, L_4, NULL);
 		V_0 = L_5;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:48>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:51>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___currentModel;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
 		L_7 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
@@ -7241,7 +7241,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_ClampScale_m3C95D0C0FE09
 		L_9 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_7, L_8, NULL);
 		NullCheck(L_6);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_6, L_9, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:49>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:52>
 		return;
 	}
 }
@@ -7249,11 +7249,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController_ClampScale_m3C95D0C0FE09
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScaleController__ctor_m96EA4B9E2FDC71ADF708466C60A52BB0A6DD75CF (ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:7>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:11>
 		__this->___scaleStep = (0.00999999978f);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:8>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:12>
 		__this->___minScale = (0.100000001f);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:9>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ScaleController.cs:13>
 		__this->___maxScale = (10.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -7280,22 +7280,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectionManager_Awake_mBA351387D1889A76
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:15>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:20>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_0 = (InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD*)il2cpp_codegen_object_new(InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD_il2cpp_TypeInfo_var);
 		InputAction__ctor_mD042AD3CC86AEDEB5FB1F8CD9E834FE35F9060B9(L_0, (String_t*)NULL, 0, _stringLiteral7BF4F4C724C53DCEA2596418073D06B355C86667, (String_t*)NULL, (String_t*)NULL, (String_t*)NULL, NULL);
 		__this->___touchAction = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___touchAction), (void*)L_0);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:16>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:21>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_1 = __this->___touchAction;
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_2 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_2, __this, (intptr_t)((void*)SelectionManager_U3CAwakeU3Eb__4_0_mF2794EDD1C72E319D1132E6434CC76F3A1871303_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		InputAction_add_performed_m0337FFA16EBEF7AE365C3B558CFDFF7BB9747B54(L_1, L_2, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:17>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:22>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_3 = __this->___touchAction;
 		NullCheck(L_3);
 		InputAction_Enable_mB3897C0741409C033656E4566EC49135C3C8BC68(L_3, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:18>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:23>
 		return;
 	}
 }
@@ -7303,11 +7303,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectionManager_Awake_mBA351387D1889A76
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectionManager_OnDestroy_mD3272E530DBA741181D14A057485D63A3F32C3CE (SelectionManager_t03DFDB72964646E3F005DC6A1346AC5C319D471D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:22>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:27>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_0 = __this->___touchAction;
 		NullCheck(L_0);
 		InputAction_Disable_m72D1982F82457C6E003440BADD06989D399BDE50(L_0, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:23>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:28>
 		return;
 	}
 }
@@ -7336,7 +7336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectionManager_OnTouch_m3863BBDAC29FEA
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_3 = NULL;
 	Highlightable_tB3BD0109A97CD95ABE06CB96A76B1902952738C3* V_4 = NULL;
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:27>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:32>
 		il2cpp_codegen_runtime_class_init_inline(Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE_il2cpp_TypeInfo_var);
 		Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* L_0;
 		L_0 = Touchscreen_get_current_m6D9CD2446B30224D18E695DF0ECC3A00E4F7B708_inline(NULL);
@@ -7346,13 +7346,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectionManager_OnTouch_m3863BBDAC29FEA
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:28>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:33>
 		return;
 	}
 
 IL_0008:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:30>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:35>
 		il2cpp_codegen_runtime_class_init_inline(Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE_il2cpp_TypeInfo_var);
 		Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* L_1;
 		L_1 = Touchscreen_get_current_m6D9CD2446B30224D18E695DF0ECC3A00E4F7B708_inline(NULL);
@@ -7360,7 +7360,7 @@ IL_0008:
 		TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* L_2;
 		L_2 = Touchscreen_get_primaryTouch_mABAC4C0F1DBA6A718B83682A91DF40FD3563F413_inline(L_1, NULL);
 		V_0 = L_2;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:31>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:36>
 		TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* L_3 = V_0;
 		NullCheck(L_3);
 		TouchPressControl_tD5BD68D9FDEAC889591DD7A499864893A43C7CEB* L_4;
@@ -7374,13 +7374,13 @@ IL_0008:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:31>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:36>
 		return;
 	}
 
 IL_0021:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:33>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:38>
 		TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* L_6 = V_0;
 		NullCheck(L_6);
 		Vector2Control_t8D1B4021A1D82671AF916D3C0A476AA94E46A432* L_7;
@@ -7389,7 +7389,7 @@ IL_0021:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8;
 		L_8 = InputControl_1_ReadValue_m362E05F00FE8CF8FC52F0D673291907EC7FA6541(L_7, InputControl_1_ReadValue_m362E05F00FE8CF8FC52F0D673291907EC7FA6541_RuntimeMethod_var);
 		V_1 = L_8;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:35>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:40>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_9 = __this->___arCamera;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
@@ -7397,7 +7397,7 @@ IL_0021:
 		NullCheck(L_9);
 		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_12;
 		L_12 = Camera_ScreenPointToRay_m2887B9A49880B7AB670C57D66B67D6A6689FE315(L_9, L_11, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:38>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:43>
 		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
 		bool L_13;
 		L_13 = Physics_Raycast_mCAC9F02A1AAB49E16B384EBC8318E2DF30F4B0E5(L_12, (&V_2), NULL);
@@ -7407,7 +7407,7 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:40>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:45>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_14;
 		L_14 = RaycastHit_get_collider_m84B160439BBEAB6D9E94B799F720E25C9E2D444D((&V_2), NULL);
 		NullCheck(L_14);
@@ -7419,17 +7419,17 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:42>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:47>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
 		L_16 = RaycastHit_get_transform_m89DB7FCFC50E0213A37CBE089400064B8FA19155((&V_2), NULL);
 		V_3 = L_16;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:45>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:50>
 		ScaleController_tDC37DDF5BBB9FA42440C27BD2EC4295038965A25* L_17 = __this->___scaleController;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18 = V_3;
 		NullCheck(L_17);
 		L_17->___currentModel = L_18;
 		Il2CppCodeGenWriteBarrier((void**)(&L_17->___currentModel), (void*)L_18);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:48>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:53>
 		Highlightable_tB3BD0109A97CD95ABE06CB96A76B1902952738C3* L_19 = __this->___lastHighlighted;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_20;
@@ -7440,7 +7440,7 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:49>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:54>
 		Highlightable_tB3BD0109A97CD95ABE06CB96A76B1902952738C3* L_21 = __this->___lastHighlighted;
 		NullCheck(L_21);
 		Highlightable_RemoveHighlight_m9DC284CCCE0D3CDD6C642D2A3C89B5C92D6F284C(L_21, NULL);
@@ -7448,13 +7448,13 @@ IL_0021:
 
 IL_008a:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:52>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:57>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_22 = V_3;
 		NullCheck(L_22);
 		Highlightable_tB3BD0109A97CD95ABE06CB96A76B1902952738C3* L_23;
 		L_23 = Component_GetComponent_TisHighlightable_tB3BD0109A97CD95ABE06CB96A76B1902952738C3_m0F68AD8BB917F3DC00FE517A36A5351703B6D310(L_22, Component_GetComponent_TisHighlightable_tB3BD0109A97CD95ABE06CB96A76B1902952738C3_m0F68AD8BB917F3DC00FE517A36A5351703B6D310_RuntimeMethod_var);
 		V_4 = L_23;
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:53>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:58>
 		Highlightable_tB3BD0109A97CD95ABE06CB96A76B1902952738C3* L_24 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_25;
@@ -7465,7 +7465,7 @@ IL_008a:
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:54>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:59>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26 = V_3;
 		NullCheck(L_26);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27;
@@ -7478,15 +7478,15 @@ IL_008a:
 
 IL_00a9:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:56>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:61>
 		Highlightable_tB3BD0109A97CD95ABE06CB96A76B1902952738C3* L_29 = V_4;
 		NullCheck(L_29);
 		Highlightable_ApplyHighlight_m9CC1F8E4495B98D7F31FD6373575165FAA47E520(L_29, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:57>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:62>
 		Highlightable_tB3BD0109A97CD95ABE06CB96A76B1902952738C3* L_30 = V_4;
 		__this->___lastHighlighted = L_30;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___lastHighlighted), (void*)L_30);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:59>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:64>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_31 = V_3;
 		NullCheck(L_31);
 		String_t* L_32;
@@ -7499,7 +7499,7 @@ IL_00a9:
 
 IL_00cd:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:62>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:67>
 		return;
 	}
 }
@@ -7515,7 +7515,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectionManager__ctor_mB63C19EF82E0D690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectionManager_U3CAwakeU3Eb__4_0_mF2794EDD1C72E319D1132E6434CC76F3A1871303 (SelectionManager_t03DFDB72964646E3F005DC6A1346AC5C319D471D* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_ctx, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:16>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SelectionManager.cs:21>
 		SelectionManager_OnTouch_m3863BBDAC29FEAF1CF22EC7AA4FB15A390E79D0C(__this, NULL);
 		return;
 	}
@@ -7554,7 +7554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SiteManager_t166B79070C220D346FCEE4E38BA2EC36
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:7>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:10>
 		SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4* L_0 = ((SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_StaticFields*)il2cpp_codegen_static_fields_for(SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
@@ -7569,7 +7569,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SiteManager_set_Instance_m7D94BFBCC29FA2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:7>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:10>
 		SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4* L_0 = ___0_value;
 		((SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_StaticFields*)il2cpp_codegen_static_fields_for(SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_StaticFields*)il2cpp_codegen_static_fields_for(SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField), (void*)L_0);
@@ -7586,7 +7586,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SiteManager_Awake_m790A8F52B719F63383FCD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:14>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:17>
 		SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4* L_0;
 		L_0 = SiteManager_get_Instance_m9E2FAA6C5551318194964A7452E2BEBCB55058E5_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -7598,9 +7598,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SiteManager_Awake_m790A8F52B719F63383FCD
 		}
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:16>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:19>
 		SiteManager_set_Instance_m7D94BFBCC29FA248E49FA293D46F3816F43BFD99_inline(__this, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:17>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:20>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 		L_2 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -7610,12 +7610,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SiteManager_Awake_m790A8F52B719F63383FCD
 
 IL_001f:
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:21>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:24>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
 		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_3, NULL);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:23>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:26>
 		return;
 	}
 }
@@ -7641,7 +7641,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SiteData_t7E35F54E8E0B9A39989965A3FDB874A8178
 		NullCheck(L_1);
 		L_1->___qrCodeName = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___qrCodeName), (void*)L_2);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:27>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:30>
 		List_1_t3A70ADBED7CEFF31046FB04EEDA54C91C5AC4037* L_3 = __this->___allSites;
 		U3CU3Ec__DisplayClass6_0_tE68DB63B0DCA2C809FA308D7988771E068E598BF* L_4 = V_0;
 		Predicate_1_t68150A7EB757A774C25A6B00C697B8410C958539* L_5 = (Predicate_1_t68150A7EB757A774C25A6B00C697B8410C958539*)il2cpp_codegen_object_new(Predicate_1_t68150A7EB757A774C25A6B00C697B8410C958539_il2cpp_TypeInfo_var);
@@ -7674,7 +7674,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SiteData_t7E35F54E8E0B9A39989965A3FDB874A8178
 		NullCheck(L_1);
 		L_1->___name = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___name), (void*)L_2);
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:32>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:35>
 		List_1_t3A70ADBED7CEFF31046FB04EEDA54C91C5AC4037* L_3 = __this->___allSites;
 		U3CU3Ec__DisplayClass7_0_t4B5507AD71E678B6439A29E6D1F4B6B2C9AACB83* L_4 = V_0;
 		Predicate_1_t68150A7EB757A774C25A6B00C697B8410C958539* L_5 = (Predicate_1_t68150A7EB757A774C25A6B00C697B8410C958539*)il2cpp_codegen_object_new(Predicate_1_t68150A7EB757A774C25A6B00C697B8410C958539_il2cpp_TypeInfo_var);
@@ -7696,7 +7696,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SiteManager__ctor_mAF4D51960439BBD94C2BD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:10>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:13>
 		List_1_t3A70ADBED7CEFF31046FB04EEDA54C91C5AC4037* L_0 = (List_1_t3A70ADBED7CEFF31046FB04EEDA54C91C5AC4037*)il2cpp_codegen_object_new(List_1_t3A70ADBED7CEFF31046FB04EEDA54C91C5AC4037_il2cpp_TypeInfo_var);
 		List_1__ctor_m516D56F9F5808A85BDD9A6D0CB0352CC0F55DB35(L_0, List_1__ctor_m516D56F9F5808A85BDD9A6D0CB0352CC0F55DB35_RuntimeMethod_var);
 		__this->___allSites = L_0;
@@ -7725,7 +7725,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass6_0__ctor_m34D69375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass6_0_U3CGetSiteByQRCodeU3Eb__0_m6AAD82FB011DC9828BC446AC53033779D11D3C8C (U3CU3Ec__DisplayClass6_0_tE68DB63B0DCA2C809FA308D7988771E068E598BF* __this, SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* ___0_s, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:27>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:30>
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_0 = ___0_s;
 		NullCheck(L_0);
 		String_t* L_1 = L_0->___qrCodeName;
@@ -7755,7 +7755,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass7_0__ctor_mD6155DDB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass7_0_U3CGetSiteByNameU3Eb__0_mA69407BBB06C7DFE202CD7DC199881E6F1545623 (U3CU3Ec__DisplayClass7_0_t4B5507AD71E678B6439A29E6D1F4B6B2C9AACB83* __this, SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* ___0_s, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:32>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:35>
 		SiteData_t7E35F54E8E0B9A39989965A3FDB874A817890865* L_0 = ___0_s;
 		NullCheck(L_0);
 		String_t* L_1 = L_0->___siteName;
@@ -12050,7 +12050,7 @@ IL_0030:
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ARCodeSpawner_set_latestSpawnedModel_m41CC1EE9EE0046E3D8D88D20AC4E74D68698B1DE_inline (ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:32>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:37>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = ___0_value;
 		__this->___U3ClatestSpawnedModelU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3ClatestSpawnedModelU3Ek__BackingField), (void*)L_0);
@@ -12061,7 +12061,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ARCodeSpawner_set_latestSpaw
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ARCodeSpawner_get_latestSpawnedModel_mCB04F57F8407C8A35AF0831883D22C0DB9AE13FF_inline (ARCodeSpawner_tA86B6472A0250AFCF4DF4396A329BE913F7C9028* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:32>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/ARCodeSpawner.cs:37>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___U3ClatestSpawnedModelU3Ek__BackingField;
 		return L_0;
 	}
@@ -12177,7 +12177,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SiteManager_t166B79070C220D346FCE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:7>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:10>
 		SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4* L_0 = ((SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_StaticFields*)il2cpp_codegen_static_fields_for(SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
@@ -12340,7 +12340,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SiteManager_set_Instance_m7D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:7>
+		//<source_info:C:/Users/pietr/Documents/AR/AR-Shackville/Assets/Scripts/SiteManager.cs:10>
 		SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4* L_0 = ___0_value;
 		((SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_StaticFields*)il2cpp_codegen_static_fields_for(SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_StaticFields*)il2cpp_codegen_static_fields_for(SiteManager_t166B79070C220D346FCEE4E38BA2EC3665121EB4_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField), (void*)L_0);

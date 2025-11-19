@@ -1,3 +1,7 @@
+//controls the additional information pop-up per site
+//Pietro Scheepers
+//11 November 2025
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -5,10 +9,10 @@ using TMPro;
 public class InfoPopupController : MonoBehaviour
 {
     [Header("Popup UI")]
-    public GameObject infoPopup;       // Full-screen panel (dim background + card)
+    public GameObject infoPopup;       
     public TMP_Text titleText;
     public TMP_Text descriptionText;
-    public Image thumbnailImage;       // optional, can be null
+    public Image thumbnailImage;       
     public Button closeButton;
 
     void Awake()
@@ -44,7 +48,6 @@ public class InfoPopupController : MonoBehaviour
         infoPopup.SetActive(true);
     }
 
-    // Convenience method for name + desc
     public void ShowInfo(string title, string description)
     {
         if (infoPopup == null) return;

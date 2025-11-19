@@ -1,12 +1,16 @@
+//Scales spawned objects smaller or bigger
+//Pietro Scheepers
+//19 November2025
+
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ScaleController : MonoBehaviour
 {
     public Transform currentModel;
-    public float scaleStep = 0.01f;      // How much to scale per frame
-    public float minScale = 0.1f;        // Minimum allowed scale
-    public float maxScale = 10f;         // Maximum allowed scale
+    public float scaleStep = 0.01f;      
+    public float minScale = 0.1f;        
+    public float maxScale = 10f;         
 
     // Flags to track button hold
     private bool isIncreasing = false;
@@ -22,14 +26,12 @@ public class ScaleController : MonoBehaviour
             ScaleDown();
     }
 
-    // Call these from your UI Button OnPointerDown
     public void StartIncreasing() => isIncreasing = true;
     public void StopIncreasing() => isIncreasing = false;
 
     public void StartDecreasing() => isDecreasing = true;
     public void StopDecreasing() => isDecreasing = false;
 
-    // Internal scaling functions
     private void ScaleUp()
     {
         currentModel.localScale += Vector3.one * scaleStep;
@@ -42,6 +44,7 @@ public class ScaleController : MonoBehaviour
         ClampScale();
     }
 
+    //Makes sure the size does not go bigger or smaller than max and min -- this can be changed
     private void ClampScale()
     {
         float clamped = Mathf.Clamp(currentModel.localScale.x, minScale, maxScale);

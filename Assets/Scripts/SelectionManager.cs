@@ -1,3 +1,8 @@
+//Not used
+//Determines which object was selected in the scene
+//Pietro Scheepers
+//18 November 2025
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
