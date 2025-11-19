@@ -19,15 +19,15 @@ MonoBehaviour:
   m_PlatformBuildProfile:
     rid: 6729888122263306322
   m_OverrideGlobalSceneList: 1
-  m_Scenes:
-  - m_enabled: 1
-    m_path: Assets/Scenes/SampleScene.unity
+  m_Scenes: []
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 6729888122263306322
       type: {class: AndroidPlatformBuildSettings, ns: UnityEditor.Android, asm: UnityEditor.Android.Extensions}
       data:
