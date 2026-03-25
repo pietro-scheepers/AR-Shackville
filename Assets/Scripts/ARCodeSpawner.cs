@@ -3,12 +3,24 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
-[RequireComponent(typeof(ARTrackedImageManager))]
-public class QRCodeSpawner : MonoBehaviour
+// Simple serializable mapping so you can set prefab per qrCodeName in Inspector
+[System.Serializable]
+public class QRPrefabMapping
 {
-    public GameObject cubePrefab;
-    public GameObject spherePrefab;
-    public GameObject capsulePrefab;
+    public string qrCodeName;   // must match the name in Reference Image Library
+    public GameObject prefab;
+}
+
+[RequireComponent(typeof(ARTrackedImageManager))]
+public class ARCodeSpawner : MonoBehaviour
+{
+    public List<QRPrefabMapping> mappings = new List<QRPrefabMapping>();
+
+    // optional: fallback prefab if nothing matches
+    public GameObject defaultPrefab;
+
+    // Reference to MenuController so we can show popup
+    public MenuController menuController;
 
     private ARTrackedImageManager trackedImageManager;
     private Dictionary<string, GameObject> spawnedObjects = new Dictionary<string, GameObject>();
@@ -28,25 +40,50 @@ public class QRCodeSpawner : MonoBehaviour
         trackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
     }
 
-    void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
+    void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs args)
     {
-        foreach (var trackedImage in eventArgs.added)
+        // Added
+        foreach (var added in args.added)
         {
-            SpawnOrUpdate(trackedImage);
+            SpawnOrUpdate(added);
+            // open popup for this qr
+            menuController?.ShowPopupForQRCode(added.referenceImage.name);
         }
 
-        foreach (var trackedImage in eventArgs.updated)
+        // Updated
+        foreach (var updated in args.updated)
         {
-            SpawnOrUpdate(trackedImage);
-        }
-
-        foreach (var trackedImage in eventArgs.removed)
-        {
-            if (spawnedObjects.ContainsKey(trackedImage.referenceImage.name))
+            if (updated.trackingState == TrackingState.Tracking)
             {
-                Destroy(spawnedObjects[trackedImage.referenceImage.name]);
-                spawnedObjects.Remove(trackedImage.referenceImage.name);
+                SpawnOrUpdate(updated);
+                // Optionally ensure popup for the currently tracked one is visible
+                menuController?.ShowPopupForQRCode(updated.referenceImage.name);
             }
+            else
+            {
+                // not tracking: hide associated object but keep it in dictionary if you prefer
+                if (spawnedObjects.ContainsKey(updated.referenceImage.name))
+                {
+                    spawnedObjects[updated.referenceImage.name].SetActive(false);
+                }
+
+                // Hide popup if the lost image is the one shown
+                menuController?.HidePopup();
+            }
+        }
+
+        // Removed
+        foreach (var removed in args.removed)
+        {
+            // Destroy spawned object and remove mapping
+            if (spawnedObjects.ContainsKey(removed.referenceImage.name))
+            {
+                Destroy(spawnedObjects[removed.referenceImage.name]);
+                spawnedObjects.Remove(removed.referenceImage.name);
+            }
+
+            // If popup was showing for this, hide it
+            menuController?.HidePopup();
         }
     }
 
@@ -54,33 +91,34 @@ public class QRCodeSpawner : MonoBehaviour
     {
         string imageName = trackedImage.referenceImage.name;
 
-        GameObject prefabToSpawn = null;
+        GameObject prefabToSpawn = GetPrefabForQRCode(imageName) ?? defaultPrefab;
 
-        switch (imageName)
-        {
-            case "CubeQR":
-                prefabToSpawn = cubePrefab;
-                break;
-            case "ElkQR":
-                prefabToSpawn = spherePrefab;
-                break;
-            case "SoundQR":
-                prefabToSpawn = capsulePrefab;
-                break;
-        }
+        if (prefabToSpawn == null) return;
 
-        if (prefabToSpawn != null)
+        if (!spawnedObjects.ContainsKey(imageName))
         {
-            if (!spawnedObjects.ContainsKey(imageName))
-            {
-                GameObject newObj = Instantiate(prefabToSpawn, trackedImage.transform.position, trackedImage.transform.rotation);
-                spawnedObjects.Add(imageName, newObj);
-            }
-            else
-            {
-                spawnedObjects[imageName].transform.position = trackedImage.transform.position;
-                spawnedObjects[imageName].transform.rotation = trackedImage.transform.rotation;
-            }
+            GameObject newObj = Instantiate(prefabToSpawn, trackedImage.transform.position, trackedImage.transform.rotation);
+            // Parent to the tracked image so it follows automatically (optional)
+            newObj.transform.SetParent(trackedImage.transform, true);
+            spawnedObjects.Add(imageName, newObj);
         }
+        else
+        {
+            GameObject existing = spawnedObjects[imageName];
+            existing.SetActive(true);
+            // Update transform so it matches the trackedImage
+            existing.transform.position = trackedImage.transform.position;
+            existing.transform.rotation = trackedImage.transform.rotation;
+        }
+    }
+
+    GameObject GetPrefabForQRCode(string qrCodeName)
+    {
+        foreach (var m in mappings)
+        {
+            if (m.qrCodeName == qrCodeName)
+                return m.prefab;
+        }
+        return null;
     }
 }
